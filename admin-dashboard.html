@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard | Tiger AI</title>
+    <meta name="description" content="Tiger AI admin dashboard preview.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI home">
+        <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="builder.html">Builder</a>
+        <a href="demo.html">Demo Link</a>
+        <a href="public-dashboard.html">Dashboard</a>
+        <a href="index.html#pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-button" href="login.html">Switch role</a>
+        <a class="primary-button" href="admin-dashboard.html">Admin</a>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="dashboard-nav" aria-label="Admin dashboard navigation">
+        <a class="active" href="admin-dashboard.html">Admin Overview</a>
+        <a href="admin-dashboard.html#users">Users</a>
+        <a href="admin-dashboard.html#templates">Templates</a>
+        <a href="admin-dashboard.html#plans">Plans</a>
+        <a href="admin-dashboard.html#leads">Leads</a>
+      </aside>
+
+      <section class="dashboard-content">
+        <div class="page-intro">
+          <div>
+            <p class="eyebrow">Admin dashboard</p>
+            <h1>Operate the Tiger AI platform.</h1>
+          </div>
+          <p>For internal operators managing users, templates, plans, leads, and platform status.</p>
+        </div>
+
+        <div class="stat-grid">
+          <article class="dashboard-card">
+            <span class="stat-label">Users</span>
+            <strong>128</strong>
+            <p>Total.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Companies</span>
+            <strong>46</strong>
+            <p>Created.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Employees</span>
+            <strong>211</strong>
+            <p>Built.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Demo Links</span>
+            <strong>89</strong>
+            <p>Shared.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Leads</span>
+            <strong>302</strong>
+            <p>Captured.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">MRR</span>
+            <strong>RM18k</strong>
+            <p>Preview.</p>
+          </article>
+        </div>
+
+        <section class="dashboard-panel-grid">
+          <article class="step-panel" id="users">
+            <p class="eyebrow">User management</p>
+            <h2>Accounts and roles</h2>
+            <ul class="compact-list">
+              <li>Assign role: user or admin</li>
+              <li>Review workspace status</li>
+              <li>Monitor signup source</li>
+            </ul>
+          </article>
+          <article class="step-panel" id="templates">
+            <p class="eyebrow">Template management</p>
+            <h2>Company template library</h2>
+            <ul class="compact-list">
+              <li>Publish AI company templates</li>
+              <li>Update knowledge checklist</li>
+              <li>Control pricing suggestions</li>
+            </ul>
+          </article>
+          <article class="step-panel" id="plans">
+            <p class="eyebrow">Plan controls</p>
+            <h2>Subscription preview</h2>
+            <ul class="compact-list">
+              <li>Free, Starter, Builder, Agency</li>
+              <li>Feature limits by plan</li>
+              <li>Payment connection later</li>
+            </ul>
+          </article>
+          <article class="step-panel" id="leads">
+            <p class="eyebrow">Lead signals</p>
+            <h2>Demo and proposal requests</h2>
+            <ul class="compact-list">
+              <li>Track demo views</li>
+              <li>Review proposal requests</li>
+              <li>Flag missing knowledge patterns</li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>Admin preview. Real role security needs Supabase policies.</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
+

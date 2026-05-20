@@ -3,7 +3,8 @@ const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
-  if (href === currentPage || (currentPage === "" && href === "index.html")) {
+  const isDashboardPage = currentPage.includes("dashboard") && href === "public-dashboard.html";
+  if (href === currentPage || isDashboardPage || (currentPage === "" && href === "index.html")) {
     link.classList.add("active");
   }
 });
@@ -34,6 +35,13 @@ const loginForm = document.querySelector("[data-login-form]");
 if (loginForm) {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    const roleSelect = loginForm.querySelector("[data-login-role]");
+
+    if (roleSelect && roleSelect.value) {
+      window.location.href = roleSelect.value;
+      return;
+    }
+
     const status = document.querySelector("[data-login-status]");
     if (status) {
       status.textContent = "Workspace access preview only. Real signup will be added in the full MVP.";

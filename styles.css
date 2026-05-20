@@ -294,7 +294,8 @@ h3 {
 .audience-card,
 .next-box,
 .client-page-card,
-.mini-panel {
+.mini-panel,
+.role-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022));
@@ -429,7 +430,10 @@ h3 {
 .pricing-grid,
 .comparison-grid,
 .audience-grid,
-.stat-grid {
+.stat-grid,
+.role-grid,
+.dashboard-panel-grid,
+.login-layout {
   display: grid;
   gap: 14px;
 }
@@ -581,6 +585,46 @@ h3 {
   border-color: var(--cyan-line);
   background:
     linear-gradient(180deg, rgba(0, 184, 230, 0.13), rgba(255, 255, 255, 0.026));
+}
+
+.role-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 22px 0 58px;
+}
+
+.role-card {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.role-card.featured {
+  border-color: var(--cyan-line);
+  background:
+    linear-gradient(180deg, rgba(0, 184, 230, 0.13), rgba(255, 255, 255, 0.026));
+}
+
+.role-badge {
+  width: fit-content;
+  border: 1px solid var(--cyan-line);
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: var(--cyan);
+  background: rgba(0, 184, 230, 0.1);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.role-card h2 {
+  margin-top: 18px;
+}
+
+.role-card .primary-button,
+.role-card .secondary-button {
+  margin-top: auto;
 }
 
 .cta-panel {
@@ -912,6 +956,10 @@ h3 {
   gap: 16px;
 }
 
+.dashboard-panel-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .dashboard-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -963,6 +1011,16 @@ h3 {
   margin-top: 0;
 }
 
+.login-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.7fr);
+  align-items: start;
+  padding: 22px 0 58px;
+}
+
+.compact-pricing {
+  max-width: 520px;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -995,7 +1053,8 @@ h3 {
 
   .template-grid,
   .pricing-grid,
-  .feature-grid {
+  .feature-grid,
+  .role-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1009,7 +1068,8 @@ h3 {
   .builder-grid,
   .demo-layout,
   .dashboard-shell,
-  .cta-panel {
+  .cta-panel,
+  .login-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1025,7 +1085,8 @@ h3 {
 
   .comparison-grid,
   .audience-grid,
-  .dashboard-grid {
+  .dashboard-grid,
+  .dashboard-panel-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1085,7 +1146,8 @@ h3 {
   .template-grid,
   .pricing-grid,
   .feature-grid,
-  .stat-grid {
+  .stat-grid,
+  .role-grid {
     grid-template-columns: 1fr;
   }
 

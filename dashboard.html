@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Workspace Dashboard | Tiger AI</title>
-    <meta name="description" content="Tiger AI workspace dashboard and subscription preview.">
+    <title>Dashboard Gateway | Tiger AI</title>
+    <meta name="description" content="Choose a Tiger AI dashboard view.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,150 +17,53 @@
         <a href="templates.html">Templates</a>
         <a href="builder.html">Builder</a>
         <a href="demo.html">Demo Link</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="public-dashboard.html">Dashboard</a>
         <a href="index.html#pricing">Pricing</a>
       </nav>
       <div class="header-actions">
-        <a class="ghost-button" href="demo.html">Back</a>
-        <a class="primary-button" href="templates.html">New company</a>
+        <a class="ghost-button" href="login.html">Log in</a>
+        <a class="primary-button" href="templates.html">Start building</a>
       </div>
     </header>
 
-    <main class="dashboard-shell">
-      <aside class="dashboard-nav" aria-label="Workspace navigation">
-        <a class="active" href="dashboard.html">Overview</a>
-        <a href="templates.html">AI Companies</a>
-        <a href="builder.html">AI Employees</a>
-        <a href="demo.html">Demo Links</a>
-        <a href="dashboard.html#subscription">Subscription</a>
-      </aside>
-
-      <section class="dashboard-content">
+    <main class="page-shell">
+      <section class="page-hero">
         <div class="page-intro">
           <div>
-            <p class="eyebrow">Step 04</p>
-            <h1>Operate your AI service business.</h1>
+            <p class="eyebrow">Dashboard Gateway</p>
+            <h1>Choose the right workspace view.</h1>
           </div>
-          <p>Workspace preview for companies, employees, demos, leads, and plans.</p>
+          <p>Three static views for the product flow: public demo view, customer workspace, and admin console.</p>
         </div>
+      </section>
 
-        <div class="stat-grid">
-          <article class="dashboard-card">
-            <span class="stat-label">AI Companies</span>
-            <strong>2</strong>
-            <p>Created.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">AI Employees</span>
-            <strong>5</strong>
-            <p>In progress.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Demo Links</span>
-            <strong>3</strong>
-            <p>Shared.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Leads</span>
-            <strong>12</strong>
-            <p>From demos.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">MRR Target</span>
-            <strong>RM4.5k</strong>
-            <p>Target value.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Plan</span>
-            <strong>Builder</strong>
-            <p>Current preview.</p>
-          </article>
-        </div>
-
-        <article class="login-card">
-          <p class="eyebrow">Workspace Access Preview</p>
-          <h2>Account workspace will be available after signup.</h2>
-          <p>Static preview only. Signup and saved workspaces come next.</p>
-          <form class="form-grid" data-login-form>
-            <label>
-              Email
-              <input type="email" placeholder="you@company.com" autocomplete="email">
-            </label>
-            <label>
-              Password
-              <input type="password" placeholder="Minimum 8 characters" autocomplete="current-password">
-            </label>
-            <button class="primary-button" type="submit">Preview workspace access</button>
-            <p data-login-status></p>
-          </form>
+      <section class="role-grid" aria-label="Dashboard views">
+        <article class="role-card">
+          <span class="role-badge">Public</span>
+          <h2>Non-registered user dashboard</h2>
+          <p>For visitors and prospects viewing what Tiger AI can generate before signup.</p>
+          <a class="secondary-button" href="public-dashboard.html">View public dashboard</a>
         </article>
-
-        <section id="subscription" aria-labelledby="subscription-title">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Subscription Plan</p>
-              <h2 id="subscription-title">Pricing preview for early access.</h2>
-            </div>
-            <p class="section-lede">Payment is not connected yet. This section shows how the SaaS subscription could be presented.</p>
-          </div>
-          <div class="pricing-grid">
-            <article class="pricing-card">
-              <span class="plan-label">Free</span>
-              <h3>Explore</h3>
-              <div class="price">RM0</div>
-              <ul class="compact-list">
-                <li>1 AI employee</li>
-                <li>1 demo link</li>
-                <li>Limited test messages</li>
-                <li>No business kit export</li>
-              </ul>
-              <a class="secondary-button" href="templates.html">Try template</a>
-            </article>
-            <article class="pricing-card">
-              <span class="plan-label">Starter</span>
-              <h3>First AI service</h3>
-              <div class="price">RM99<small>/month</small></div>
-              <ul class="compact-list">
-                <li>3 AI employees</li>
-                <li>1 AI company profile</li>
-                <li>Basic business kit</li>
-                <li>Demo link</li>
-              </ul>
-              <a class="secondary-button" href="templates.html">Start building</a>
-            </article>
-            <article class="pricing-card featured">
-              <span class="plan-label">Builder</span>
-              <h3>Most relevant</h3>
-              <div class="price">RM299<small>/month</small></div>
-              <ul class="compact-list">
-                <li>10 AI employees</li>
-                <li>3 AI company profiles</li>
-                <li>Proposal and pricing generators</li>
-                <li>Client demo links and basic dashboard</li>
-              </ul>
-              <a class="primary-button" href="templates.html">Choose Builder</a>
-            </article>
-            <article class="pricing-card">
-              <span class="plan-label">Agency</span>
-              <h3>Client operations</h3>
-              <div class="price">RM799<small>/month</small></div>
-              <ul class="compact-list">
-                <li>Unlimited AI employees</li>
-                <li>Client workspaces</li>
-                <li>White-label demo links</li>
-                <li>Team access and priority support</li>
-              </ul>
-              <a class="secondary-button" href="demo.html">View demo system</a>
-            </article>
-          </div>
-        </section>
+        <article class="role-card featured">
+          <span class="role-badge">User</span>
+          <h2>Customer user dashboard</h2>
+          <p>For registered users building AI companies, employees, demo links, and subscriptions.</p>
+          <a class="primary-button" href="user-dashboard.html">View user dashboard</a>
+        </article>
+        <article class="role-card">
+          <span class="role-badge">Admin</span>
+          <h2>Admin dashboard</h2>
+          <p>For Tiger AI operators managing users, templates, plans, leads, and platform health.</p>
+          <a class="secondary-button" href="admin-dashboard.html">View admin dashboard</a>
+        </article>
       </section>
     </main>
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>Phase 2: real signup, saved companies, database, and AI generation APIs.</span>
+      <span>Static dashboard split. Supabase auth comes next.</span>
     </footer>
     <script src="app.js"></script>
   </body>
 </html>
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard | Tiger AI</title>
+    <meta name="description" content="Tiger AI customer user dashboard.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI home">
+        <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="builder.html">Builder</a>
+        <a href="demo.html">Demo Link</a>
+        <a href="public-dashboard.html">Dashboard</a>
+        <a href="index.html#pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-button" href="login.html">Switch role</a>
+        <a class="primary-button" href="templates.html">New company</a>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="dashboard-nav" aria-label="User dashboard navigation">
+        <a class="active" href="user-dashboard.html">Overview</a>
+        <a href="templates.html">AI Companies</a>
+        <a href="builder.html">AI Employees</a>
+        <a href="demo.html">Demo Links</a>
+        <a href="user-dashboard.html#subscription">Subscription</a>
+      </aside>
+
+      <section class="dashboard-content">
+        <div class="page-intro">
+          <div>
+            <p class="eyebrow">Customer user dashboard</p>
+            <h1>Operate your AI service business.</h1>
+          </div>
+          <p>For registered users building AI companies, training employees, and managing demos.</p>
+        </div>
+
+        <div class="stat-grid">
+          <article class="dashboard-card">
+            <span class="stat-label">AI Companies</span>
+            <strong>2</strong>
+            <p>Created.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">AI Employees</span>
+            <strong>5</strong>
+            <p>In progress.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Demo Links</span>
+            <strong>3</strong>
+            <p>Shared.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Leads</span>
+            <strong>12</strong>
+            <p>From demos.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">MRR Target</span>
+            <strong>RM4.5k</strong>
+            <p>Target value.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Plan</span>
+            <strong>Builder</strong>
+            <p>Current preview.</p>
+          </article>
+        </div>
+
+        <section class="dashboard-panel-grid">
+          <article class="step-panel">
+            <p class="eyebrow">Active company</p>
+            <h2>AI Admin Company</h2>
+            <ul class="compact-list">
+              <li>AI Admin Assistant: 81% accuracy</li>
+              <li>Business kit: proposal and pricing ready</li>
+              <li>Demo link: shared with 3 prospects</li>
+            </ul>
+          </article>
+          <article class="step-panel">
+            <p class="eyebrow">Next actions</p>
+            <h2>Improve demo readiness</h2>
+            <ul class="compact-list">
+              <li>Add pricing rules</li>
+              <li>Add refund policy</li>
+              <li>Send follow-up script</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="subscription" aria-labelledby="subscription-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Subscription Plan</p>
+              <h2 id="subscription-title">Builder plan preview.</h2>
+            </div>
+            <p class="section-lede">Payment is not connected yet.</p>
+          </div>
+          <article class="pricing-card featured compact-pricing">
+            <span class="plan-label">Builder</span>
+            <h3>Build repeatable offers</h3>
+            <div class="price">RM299<small>/month</small></div>
+            <ul class="compact-list">
+              <li>10 AI employees</li>
+              <li>3 AI company profiles</li>
+              <li>Proposal and pricing generators</li>
+              <li>Client demo links and dashboard</li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>User dashboard preview. Real data connects after Supabase.</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
+

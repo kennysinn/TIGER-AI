@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Tiger AI</title>
+    <meta name="description" content="Tiger AI login and role routing preview.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI home">
+        <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="builder.html">Builder</a>
+        <a href="demo.html">Demo Link</a>
+        <a href="public-dashboard.html">Dashboard</a>
+        <a href="index.html#pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-button" href="public-dashboard.html">Public view</a>
+        <a class="primary-button" href="templates.html">Start building</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero">
+        <div class="page-intro">
+          <div>
+            <p class="eyebrow">Login preview</p>
+            <h1>Route users to the right dashboard.</h1>
+          </div>
+          <p>Frontend-only for now. Supabase will authenticate users and load their role later.</p>
+        </div>
+      </section>
+
+      <section class="login-layout">
+        <article class="login-card">
+          <p class="eyebrow">Workspace Login</p>
+          <h2>Choose a preview role</h2>
+          <form class="form-grid" data-login-form>
+            <label>
+              Email
+              <input type="email" placeholder="you@company.com" autocomplete="email">
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="Minimum 8 characters" autocomplete="current-password">
+            </label>
+            <label>
+              Dashboard role
+              <select data-login-role>
+                <option value="user-dashboard.html">Customer user dashboard</option>
+                <option value="admin-dashboard.html">Admin dashboard</option>
+                <option value="public-dashboard.html">Non-registered public dashboard</option>
+              </select>
+            </label>
+            <button class="primary-button" type="submit">Continue to dashboard</button>
+            <p data-login-status></p>
+          </form>
+        </article>
+
+        <article class="step-panel">
+          <p class="eyebrow">Role structure</p>
+          <h2>Three dashboard types</h2>
+          <ul class="compact-list">
+            <li><strong>Public:</strong> visitor preview, no account needed</li>
+            <li><strong>User:</strong> customer workspace after signup</li>
+            <li><strong>Admin:</strong> internal platform console</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>Supabase auth will replace this static role selector.</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
+

@@ -27,7 +27,25 @@ Pages:
 2. `templates.html`
 3. `builder.html`
 4. `demo.html`
-5. `dashboard.html`
+5. `public-dashboard.html`
+6. `user-dashboard.html`
+7. `admin-dashboard.html`
+8. `login.html`
+9. `dashboard.html`
+
+## Dashboard Roles
+
+Current static role structure:
+
+1. Non-registered users: `public-dashboard.html`
+2. Customer users: `user-dashboard.html`
+3. Admin users: `admin-dashboard.html`
+
+`login.html` is currently a frontend-only role routing preview.
+
+## Supabase
+
+See `docs/SUPABASE_ACCESS.md` for the access needed to connect real login.
 
 ## GitHub Pages Deployment
 
