@@ -83,9 +83,12 @@ textarea {
 }
 
 .brand-logo {
-  width: 150px;
-  height: auto;
+  width: 168px;
+  height: 58px;
   display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .brand-name {
@@ -180,7 +183,12 @@ textarea {
 
 .hero-logo {
   width: min(360px, 78vw);
+  height: 178px;
   margin-bottom: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 44px rgba(0, 184, 230, 0.12);
 }
 
 .eyebrow {
@@ -736,7 +744,8 @@ h3 {
   }
 
   .brand-logo {
-    width: 132px;
+    width: 150px;
+    height: 52px;
   }
 
   .main-nav {
@@ -790,6 +799,6 @@ h3 {
 
   .hero-logo {
     width: 260px;
+    height: 130px;
   }
 }
-
