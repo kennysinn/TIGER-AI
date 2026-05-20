@@ -19,11 +19,13 @@ In Supabase, enable:
 1. Authentication > Providers > Email
 2. Authentication > Providers > Google
 
-For Google login, add the production redirect URL:
+For Google login and email confirmation, add the production redirect URL:
 
 `https://kennysinn.github.io/TIGER-AI/login.html`
 
-The same URL is also used for email confirmation and password reset.
+For forgot password, also add:
+
+`https://kennysinn.github.io/TIGER-AI/reset-password.html`
 
 Also add the local URL later if testing locally with a server.
 

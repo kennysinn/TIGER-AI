@@ -22,12 +22,13 @@ const templateName = document.querySelector("[data-template-name]");
 
 if (templateName && chosenTemplate) {
   const names = {
-    admin: "AI Admin Company",
-    support: "AI Customer Support Company",
-    content: "AI Content Agency",
-    sales: "AI Sales Follow-up Company"
+    speed: "Speed-to-Lead AI Company",
+    documents: "Document Processing AI Company",
+    followup: "Follow-up Engine AI Company",
+    reactivation: "Customer Reactivation AI Company",
+    reporting: "Business Reporting AI Company"
   };
-  templateName.textContent = names[chosenTemplate] || names.admin;
+  templateName.textContent = names[chosenTemplate] || names.speed;
 }
 
 const loginForm = document.querySelector("[data-login-form]");

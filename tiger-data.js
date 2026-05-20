@@ -1,45 +1,116 @@
 (function () {
   const TEMPLATE_DATA = {
-    admin: {
-      template_key: "admin",
-      company_name: "AI Admin Company",
-      company_type: "AI Admin Company",
-      target_customer: "SME owners and operators",
-      service_type: "Admin replies, quotation support, and follow-up",
+    speed: {
+      template_key: "speed",
+      company_name: "Speed-to-Lead AI Company",
+      company_type: "Speed-to-Lead AI Company",
+      problem: "Businesses lose leads because replies are too slow.",
+      target_customer: "SMEs that receive enquiries from WhatsApp, forms, ads, or social inboxes",
+      service_type: "Fast enquiry response, lead qualification, and sales handover",
       primary_language: "English + Mandarin + Malay",
-      pricing_direction: "Starter retainer from RM299/month",
-      description: "A practical AI admin service for customer replies, quotation drafts, and simple operations support."
+      pricing_direction: "Setup RM1,500-RM3,000 + monthly RM300-RM800",
+      result_promised: "Faster replies, fewer lost leads, and cleaner sales handover.",
+      handover_rule: "Hand over hot leads, urgent requests, and cases with missing pricing or booking details.",
+      description: "A one-person AI service company that helps businesses respond to new enquiries quickly and prepare clean sales handovers.",
+      employees: ["AI First Responder", "AI Lead Qualifier", "AI Sales Handover Assistant", "AI Hot Lead Detector", "AI Appointment Setter"],
+      knowledge: ["FAQ", "product or service details", "pricing", "booking rules", "handover contact", "service area"],
+      servicePackage: "AI Speed-to-Lead Assistant with first response flow, qualification questions, hot lead signals, and sales handover summary.",
+      proposalOutline: "Slow response cost, proposed enquiry flow, AI employee roles, handover process, setup timeline, and monthly optimization.",
+      whatsappScript: "Hi, I help businesses reply to new enquiries faster, qualify leads, and send clean handover notes to sales. Want to see a demo?",
+      onboardingForm: "Business hours, services, pricing rules, booking rules, service area, sales contact, and common customer questions.",
+      monthlyReport: "New leads, qualified leads, hot leads, average response time, handover count, and missing information."
     },
-    support: {
-      template_key: "support",
-      company_name: "AI Customer Support Company",
-      company_type: "AI Customer Support Company",
-      target_customer: "Local businesses with repeat customer questions",
-      service_type: "FAQ automation, lead qualification, and human handover",
+    documents: {
+      template_key: "documents",
+      company_name: "Document Processing AI Company",
+      company_type: "Document Processing AI Company",
+      problem: "Businesses waste hours processing invoices, forms, orders, quotation requests, and admin documents.",
+      target_customer: "Admin-heavy SMEs, wholesalers, clinics, logistics teams, and service companies",
+      service_type: "Document reading, data extraction, error checking, and structured output",
       primary_language: "English + Mandarin + Malay",
-      pricing_direction: "Support package from RM399/month",
-      description: "An AI customer support service that helps businesses answer common questions and collect lead details."
+      pricing_direction: "Setup RM2,000-RM4,000 + monthly by document volume",
+      result_promised: "Less manual data entry, fewer errors, and faster admin workflow.",
+      handover_rule: "Hand over documents with unclear totals, missing fields, or conflicting customer information.",
+      description: "A one-person AI service company that helps businesses turn messy documents and requests into structured working data.",
+      employees: ["AI Document Reader", "AI Data Extractor", "AI Order Structurer", "AI Error Checker", "AI Admin Entry Assistant"],
+      knowledge: ["sample invoices", "quotation format", "order rules", "required fields", "error examples", "export format"],
+      servicePackage: "AI Document Processing Assistant with extraction fields, missing info checks, and structured admin output.",
+      proposalOutline: "Manual admin bottleneck, document types, extraction workflow, error checks, output format, and monthly processing report.",
+      whatsappScript: "Hi, I help teams reduce manual document entry by extracting invoice, order, and quotation details into structured data.",
+      onboardingForm: "Document samples, required fields, approval rules, output format, error examples, and monthly volume.",
+      monthlyReport: "Documents processed, hours saved, missing fields, error checks, and pending items."
     },
-    content: {
-      template_key: "content",
-      company_name: "AI Content Agency",
-      company_type: "AI Content Agency",
-      target_customer: "Consultants, trainers, coaches, and agencies",
-      service_type: "Research, writing, and content repurposing",
-      primary_language: "English first",
-      pricing_direction: "Monthly content package from RM599/month",
-      description: "An AI-assisted content service for research, drafting, and turning ideas into reusable content assets."
-    },
-    sales: {
-      template_key: "sales",
-      company_name: "AI Sales Follow-up Company",
-      company_type: "AI Sales Follow-up Company",
-      target_customer: "Consultants and SMEs with active leads",
-      service_type: "Lead follow-up, proposal reminders, and client handover",
+    followup: {
+      template_key: "followup",
+      company_name: "Follow-up Engine AI Company",
+      company_type: "Follow-up Engine AI Company",
+      problem: "Businesses lose deals because nobody follows up consistently after enquiry, quotation, demo, meeting, or webinar.",
+      target_customer: "Sales teams, consultants, education centres, service providers, and high-ticket businesses",
+      service_type: "Lead follow-up, quotation reminders, next-step prompts, and sales scripts",
       primary_language: "English + Mandarin",
-      pricing_direction: "Follow-up package from RM499/month",
-      description: "An AI sales follow-up service that helps teams respond faster and keep proposal conversations moving."
+      pricing_direction: "Setup RM1,500-RM3,500 + monthly RM500-RM1,500",
+      result_promised: "Recovered leads, better follow-up discipline, and more proposal opportunities.",
+      handover_rule: "Hand over hot replies, objections, appointment requests, and customers asking for final pricing.",
+      description: "A one-person AI service company that helps businesses continue conversations after the first enquiry or quotation.",
+      employees: ["AI Follow-up Manager", "AI Quotation Follow-up Assistant", "AI Sales Reminder Assistant", "AI Objection Handler"],
+      knowledge: ["lead stages", "quotation details", "follow-up timing", "sales objections", "offer details", "handover owner"],
+      servicePackage: "AI Follow-up Recovery System with 1-day, 3-day, and 7-day reminders, sales scripts, and lead status tracking.",
+      proposalOutline: "Lost follow-up problem, lead stages, recommended sequence, scripts, handover rules, and performance reporting.",
+      whatsappScript: "Hi, I help businesses follow up with leads and quotations consistently so good opportunities do not disappear.",
+      onboardingForm: "Lead sources, quotation process, offer details, follow-up timing, objection list, and sales owner.",
+      monthlyReport: "Follow-ups sent, replies, reactivated leads, proposal requests, won leads, and stuck opportunities."
+    },
+    reactivation: {
+      template_key: "reactivation",
+      company_name: "Customer Reactivation AI Company",
+      company_type: "Customer Reactivation AI Company",
+      problem: "Businesses have old leads, old customers, or old enquiries that are not being used.",
+      target_customer: "Businesses with old WhatsApp enquiries, customer lists, past buyers, or dormant leads",
+      service_type: "Old lead sorting, customer segmentation, reactivation scripts, and response classification",
+      primary_language: "English + Mandarin",
+      pricing_direction: "Audit RM800-RM2,000 + campaign fee + monthly retainer",
+      result_promised: "Recover customer opportunities without increasing ad spend.",
+      handover_rule: "Hand over warm replies, buying signals, complaints, and requests for updated offers.",
+      description: "A one-person AI service company that helps businesses reactivate old customer lists and recover dormant opportunities.",
+      employees: ["AI Old Lead Scanner", "AI Reactivation Message Writer", "AI Customer Segmenter", "AI Campaign Assistant", "AI Response Classifier"],
+      knowledge: ["old lead source", "customer segments", "past offers", "new offer", "message rules", "response categories"],
+      servicePackage: "AI Lost Lead Recovery Campaign with database audit, segmentation, message drafts, and response classification.",
+      proposalOutline: "Unused customer asset, segmentation method, reactivation campaign, message examples, handover flow, and report.",
+      whatsappScript: "Hi, I help businesses turn old customer lists and old enquiries into fresh conversations with a structured reactivation campaign.",
+      onboardingForm: "Old lead list, past purchase details, customer segments, new offer, message approval, and follow-up owner.",
+      monthlyReport: "Contacts activated, responses, warm leads, hot leads, blocked contacts, and estimated recovered value."
+    },
+    reporting: {
+      template_key: "reporting",
+      company_name: "Business Reporting AI Company",
+      company_type: "Business Reporting AI Company",
+      problem: "Bosses do not know daily business status, enquiry progress, sales follow-up gaps, or team performance.",
+      target_customer: "Owners and managers who need daily visibility across leads, sales activity, and follow-up gaps",
+      service_type: "Daily reports, sales visibility, task summary, performance signals, and management alerts",
+      primary_language: "English + Mandarin + Malay",
+      pricing_direction: "Monthly reporting retainer from RM500-RM1,500",
+      result_promised: "Daily visibility, better management, and less dependency on manual updates.",
+      handover_rule: "Alert the owner when hot leads are stuck, follow-up is missed, or key numbers change.",
+      description: "A one-person AI service company that helps owners see what is happening without chasing manual updates every day.",
+      employees: ["AI Daily Report Assistant", "AI Sales Visibility Assistant", "AI Performance Analyst", "AI Task Summary Assistant", "AI Management Alert Assistant"],
+      knowledge: ["lead fields", "sales stages", "report format", "alert rules", "team owners", "daily targets"],
+      servicePackage: "AI Daily Business Report System with daily summary, follow-up gap report, hot lead list, and management alerts.",
+      proposalOutline: "Visibility gap, reporting inputs, daily summary format, alert rules, management workflow, and monthly review.",
+      whatsappScript: "Hi, I help owners get daily visibility on enquiries, follow-up gaps, and sales activity without manual chasing.",
+      onboardingForm: "Lead sources, sales stages, staff owners, report timing, alert rules, and monthly targets.",
+      monthlyReport: "Lead count, follow-up rate, hot leads, pending actions, team visibility, and missed follow-ups."
     }
+  };
+
+  const LEGACY_TEMPLATE_MAP = {
+    admin: "documents",
+    support: "speed",
+    content: "reporting",
+    sales: "followup"
+  };
+
+  const getTemplate = (templateKey) => {
+    return TEMPLATE_DATA[templateKey] || TEMPLATE_DATA[LEGACY_TEMPLATE_MAP[templateKey]] || TEMPLATE_DATA.speed;
   };
 
   const requireTigerAuth = () => {
@@ -72,11 +143,18 @@
 
     await auth.ensureProfile(user);
 
-    const template = TEMPLATE_DATA[templateKey] || TEMPLATE_DATA.admin;
+    const template = getTemplate(templateKey);
     const { data, error } = await auth.client
       .from("ai_companies")
       .insert({
-        ...template,
+        template_key: template.template_key,
+        company_name: template.company_name,
+        company_type: template.company_type,
+        target_customer: template.target_customer,
+        service_type: template.service_type,
+        primary_language: template.primary_language,
+        pricing_direction: template.pricing_direction,
+        description: template.description,
         user_id: user.id,
         status: "draft"
       })
@@ -96,7 +174,7 @@
     templateButtons.forEach((button) => {
       button.addEventListener("click", async (event) => {
         event.preventDefault();
-        const templateKey = button.dataset.template || "admin";
+        const templateKey = button.dataset.template || "speed";
         localStorage.setItem("tiger-ai-template", templateKey);
         setDataStatus("Creating your AI company...");
 
@@ -162,6 +240,29 @@
       target.textContent = data.company_type;
     });
 
+    const template = getTemplate(data.template_key);
+    document.querySelectorAll("[data-template-problem]").forEach((target) => {
+      target.textContent = template.problem;
+    });
+    document.querySelectorAll("[data-result-promised]").forEach((target) => {
+      target.textContent = template.result_promised;
+      if ("value" in target) {
+        target.value = template.result_promised;
+      }
+    });
+    document.querySelectorAll("[data-handover-rule]").forEach((target) => {
+      target.textContent = template.handover_rule;
+      if ("value" in target) {
+        target.value = template.handover_rule;
+      }
+    });
+    document.querySelectorAll("[data-template-employees]").forEach((target) => {
+      target.innerHTML = template.employees.map((employee) => `<span>${employee}</span>`).join("");
+    });
+    document.querySelectorAll("[data-template-knowledge]").forEach((target) => {
+      target.innerHTML = template.knowledge.map((item) => `<li>${item}</li>`).join("");
+    });
+
     const form = document.querySelector("[data-company-form]");
     if (!form) {
       return;
@@ -224,7 +325,7 @@
         <div>
           <span class="template-code">${company.status || "draft"}</span>
           <h3>${company.company_name}</h3>
-          <p>${company.company_type}</p>
+          <p>${getTemplate(company.template_key).result_promised}</p>
         </div>
         <a class="secondary-button" href="builder.html?company_id=${encodeURIComponent(company.id)}">Open</a>
       </article>
@@ -275,5 +376,6 @@
     }
   };
 
+  window.TigerTemplates = TEMPLATE_DATA;
   init();
 })();

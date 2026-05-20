@@ -127,6 +127,11 @@
     return `${window.location.origin}${path}`;
   };
 
+  const getResetRedirectTo = () => {
+    const path = window.location.pathname.replace(/\/[^/]*$/, "/reset-password.html");
+    return `${window.location.origin}${path}`;
+  };
+
   const routeIfNeeded = async () => {
     const { data } = await client.auth.getSession();
     const user = data.session?.user;
@@ -226,7 +231,7 @@
       setStatus("Sending password reset email...");
 
       const { error } = await client.auth.resetPasswordForEmail(email, {
-        redirectTo: getRedirectTo()
+        redirectTo: getResetRedirectTo()
       });
 
       if (error) {
@@ -250,6 +255,52 @@
       if (error) {
         setStatus(error.message);
       }
+    });
+  };
+
+  const bindResetPasswordForm = () => {
+    const form = document.querySelector("[data-reset-form]");
+    if (!form) {
+      return;
+    }
+
+    const passwordInput = form.querySelector("[data-reset-password]");
+    const confirmInput = form.querySelector("[data-reset-confirm]");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      setStatus("Updating password...");
+
+      if (passwordInput.value.length < 8) {
+        setStatus("Use at least 8 characters for the new password.");
+        return;
+      }
+
+      if (passwordInput.value !== confirmInput.value) {
+        setStatus("Passwords do not match.");
+        return;
+      }
+
+      const { data } = await client.auth.getSession();
+      if (!data.session?.user) {
+        setStatus("Reset session not found. Open the latest password reset link from your email.");
+        return;
+      }
+
+      const { error } = await client.auth.updateUser({
+        password: passwordInput.value
+      });
+
+      if (error) {
+        setStatus(error.message);
+        return;
+      }
+
+      setStatus("Password updated. Redirecting to login...");
+      await client.auth.signOut();
+      window.setTimeout(() => {
+        window.location.href = "login.html";
+      }, 900);
     });
   };
 
@@ -290,6 +341,7 @@
   };
 
   bindAuthForm();
+  bindResetPasswordForm();
   bindLogout();
   routeIfNeeded();
 })();

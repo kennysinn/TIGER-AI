@@ -33,16 +33,18 @@
         <a href="templates.html">AI Companies</a>
         <a href="builder.html">AI Employees</a>
         <a href="demo.html">Demo Links</a>
+        <a href="user-dashboard.html#business-kits">Business Kits</a>
+        <a href="user-dashboard.html#leads">Leads</a>
         <a href="user-dashboard.html#subscription">Subscription</a>
       </aside>
 
       <section class="dashboard-content">
         <div class="page-intro">
           <div>
-            <p class="eyebrow">Customer user dashboard</p>
+            <p class="eyebrow">User dashboard</p>
             <h1>Operate your AI service business.</h1>
           </div>
-          <p>For registered users building AI companies, training employees, and managing demos.</p>
+          <p>Track AI companies, AI employees, demo links, leads, business kits, and MRR target from one workspace.</p>
         </div>
         <p class="inline-status" data-auth-error hidden></p>
         <p class="inline-status" data-data-status hidden></p>
@@ -55,23 +57,23 @@
           </article>
           <article class="dashboard-card">
             <span class="stat-label">AI Employees</span>
-            <strong>0</strong>
-            <p>Sprint 2.</p>
+            <strong>5</strong>
+            <p>Template team.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Demo Links</span>
-            <strong>0</strong>
-            <p>Sprint 3.</p>
+            <strong>1</strong>
+            <p>Preview.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Leads</span>
-            <strong>0</strong>
-            <p>Sprint 3.</p>
+            <strong>3</strong>
+            <p>Mock pipeline.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">MRR Target</span>
-            <strong>RM0</strong>
-            <p>Later.</p>
+            <strong>RM1.5k</strong>
+            <p>First client target.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Plan</span>
@@ -82,7 +84,7 @@
 
         <section class="dashboard-panel-grid">
           <article class="step-panel">
-            <p class="eyebrow">Active company</p>
+            <p class="eyebrow">AI Companies</p>
             <h2>Your AI companies</h2>
             <div class="company-list" data-company-list>
               <div class="empty-state">
@@ -91,14 +93,51 @@
             </div>
           </article>
           <article class="step-panel">
-            <p class="eyebrow">Next actions</p>
-            <h2>Build the next layer</h2>
+            <p class="eyebrow">AI Employees</p>
+            <h2>Template employee team</h2>
             <ul class="compact-list">
-              <li>Create AI employee profile</li>
-              <li>Generate starter business kit</li>
-              <li>Create first demo link</li>
+              <li>AI First Responder</li>
+              <li>AI Lead Qualifier</li>
+              <li>AI Sales Handover Assistant</li>
+              <li>AI Hot Lead Detector</li>
             </ul>
           </article>
+        </section>
+
+        <section class="dashboard-panel-grid" id="business-kits">
+          <article class="step-panel">
+            <p class="eyebrow">Business Kits</p>
+            <h2>Generated service assets</h2>
+            <div class="mini-metric-list">
+              <span>Service package</span>
+              <span>Pricing suggestion</span>
+              <span>Proposal outline</span>
+              <span>WhatsApp script</span>
+              <span>Onboarding form</span>
+              <span>Monthly report</span>
+            </div>
+          </article>
+          <article class="step-panel" id="leads">
+            <p class="eyebrow">Leads</p>
+            <h2>Demo link pipeline</h2>
+            <ul class="compact-list">
+              <li>New proposal request - Speed-to-Lead demo</li>
+              <li>Missing info feedback - pricing rules</li>
+              <li>Follow-up needed - booking workflow</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="step-panel">
+          <p class="eyebrow">Template library</p>
+          <h2>Pain-point AI company templates</h2>
+          <div class="mini-metric-list template-pills">
+            <span>Slow replies</span>
+            <span>Manual documents</span>
+            <span>Missed follow-ups</span>
+            <span>Sleeping customer database</span>
+            <span>No business visibility</span>
+          </div>
         </section>
 
         <section id="subscription" aria-labelledby="subscription-title">
@@ -126,7 +165,7 @@
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>User dashboard. Saved data comes next.</span>
+      <span>Account workspace is available after signup.</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>

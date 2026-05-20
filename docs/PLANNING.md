@@ -38,7 +38,7 @@ Tiger AI should not compete as a generic chatbot builder, automation tool, or AI
 
 ### 1. AI Company Builder
 
-Users choose a company template such as AI Admin Company, AI Customer Support Company, or AI Content Agency.
+Users choose a pain-point company template such as Speed-to-Lead AI Company, Document Processing AI Company, Follow-up Engine AI Company, Customer Reactivation AI Company, or Business Reporting AI Company.
 
 Each template includes:
 

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employee Builder | Tiger AI</title>
-    <meta name="description" content="Create and train an AI employee in Tiger AI.">
+    <title>AI Company Builder | Tiger AI</title>
+    <meta name="description" content="Build a pain-point-based AI company in Tiger AI.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body data-auth-required="user">
@@ -31,9 +31,9 @@
         <div class="page-intro">
           <div>
             <p class="eyebrow">Step 02</p>
-            <h1>Set up your AI company.</h1>
+            <h1>You are building: <span data-company-name>Loading company...</span></h1>
           </div>
-          <p><strong data-company-name>Loading company...</strong> · <span data-company-type>Loading type...</span></p>
+          <p><strong data-company-type>Loading type...</strong> solves: <span data-template-problem>Loading business problem...</span></p>
         </div>
         <p class="inline-status" data-auth-error hidden></p>
         <p class="inline-status" data-data-status hidden></p>
@@ -50,28 +50,36 @@
         <div class="builder-main">
           <article class="step-panel">
             <span class="step-number">Company Setup</span>
-            <h2>Save your AI company profile</h2>
-            <p>This is the first real saved object in the Tiger AI workspace.</p>
+            <h2>Define the offer around the business pain.</h2>
+            <p>Keep the offer clear: who it helps, what result it creates, and when the AI hands over.</p>
             <form class="form-grid" data-company-form>
               <label>
                 Company name
-                <input name="company_name" placeholder="AI Admin Company">
+                <input name="company_name" placeholder="Speed-to-Lead AI Company">
               </label>
               <label>
                 Target customer
-                <input name="target_customer" placeholder="SME owners and operators">
+                <input name="target_customer" placeholder="SMEs with WhatsApp enquiries">
               </label>
               <label>
                 Service type
-                <input name="service_type" placeholder="Admin replies and quotation support">
+                <input name="service_type" placeholder="Lead response and handover system">
               </label>
               <label>
                 Primary language
                 <input name="primary_language" placeholder="English + Mandarin + Malay">
               </label>
               <label>
+                Result promised
+                <input data-result-promised readonly>
+              </label>
+              <label>
+                Handover rule
+                <input data-handover-rule readonly>
+              </label>
+              <label>
                 Pricing direction
-                <input name="pricing_direction" placeholder="Starter retainer from RM299/month">
+                <input name="pricing_direction" placeholder="Setup + monthly support">
               </label>
               <label>
                 Description
@@ -82,44 +90,36 @@
           </article>
 
           <article class="step-panel">
-            <span class="step-number">Saved Workspace</span>
-            <h2>Company data foundation</h2>
-            <p>Your company is now saved to Supabase and tied to your login.</p>
-            <div class="training-card">
-              <div class="file-chip">
-                <span>profiles</span>
-                <strong>Active</strong>
-              </div>
-              <div class="file-chip">
-                <span>ai_companies</span>
-                <strong>Active</strong>
-              </div>
-            </div>
+            <span class="step-number">AI Employee Studio</span>
+            <h2>Recommended AI employee team</h2>
+            <p>Each pain-point template starts with a small team of AI employees that match the service outcome.</p>
+            <div class="employee-chip-list" data-template-employees></div>
           </article>
 
           <article class="step-panel">
             <span class="step-number">Readiness Score</span>
-            <h2>What comes next</h2>
+            <h2>Knowledge trainer checklist</h2>
             <div class="readiness-card">
               <div class="score-grid">
                 <div class="score-tile">
-                  <span>Sprint 1</span>
-                  <strong>Company</strong>
-                  <div class="meter"><i style="width: 100%"></i></div>
+                  <span>Knowledge coverage</span>
+                  <strong>68%</strong>
+                  <div class="meter"><i style="width: 68%"></i></div>
                 </div>
                 <div class="score-tile">
-                  <span>Sprint 2</span>
-                  <strong>Employee</strong>
-                  <div class="meter"><i style="width: 20%"></i></div>
+                  <span>Answer accuracy</span>
+                  <strong>74%</strong>
+                  <div class="meter"><i style="width: 74%"></i></div>
                 </div>
               </div>
+              <ul class="checklist-grid" data-template-knowledge></ul>
               <div class="readiness-row warning">
-                <span>Not built yet</span>
-                <strong>AI employees, business kits, demo links</strong>
+                <span>Missing information</span>
+                <strong>Pricing rules, handover contact, report format</strong>
               </div>
               <div class="readiness-row">
-                <span>Current status</span>
-                <strong>AI company saved</strong>
+                <span>Demo readiness</span>
+                <strong>Ready for controlled demo</strong>
               </div>
               <div class="form-actions">
                 <a class="secondary-button" href="templates.html">Change template</a>
@@ -131,12 +131,12 @@
 
         <aside class="next-box" aria-label="What happens next">
           <p class="eyebrow">What happens next?</p>
-          <h2>Next sprint: AI employee.</h2>
+          <h2>From AI employee to AI business.</h2>
           <ul class="compact-list">
-            <li>Create AI employee profile</li>
-            <li>Attach employee to this company</li>
-            <li>Generate starter business kit</li>
-            <li>Prepare demo link structure</li>
+            <li>Test employee replies</li>
+            <li>Generate business kit</li>
+            <li>Share demo link</li>
+            <li>Collect proposal request</li>
           </ul>
           <a class="primary-button" href="user-dashboard.html">View dashboard</a>
         </aside>
@@ -145,7 +145,7 @@
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>Sprint 1: real AI company data foundation.</span>
+      <span>Build around business pain, then package the service.</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
