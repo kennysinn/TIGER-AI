@@ -643,38 +643,6 @@ h3 {
   margin-top: auto;
 }
 
-.cta-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 22px;
-  align-items: center;
-  margin: 10px 0 10px;
-  padding: 24px;
-  border: 1px solid var(--cyan-line);
-  border-radius: var(--radius);
-  background:
-    radial-gradient(circle at right, rgba(0, 184, 230, 0.2), transparent 36%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.064), rgba(255, 255, 255, 0.026));
-  box-shadow: var(--shadow);
-}
-
-.email-mock {
-  display: flex;
-  gap: 8px;
-  width: min(430px, 100%);
-}
-
-.email-mock input {
-  min-width: 0;
-  flex: 1;
-  min-height: 40px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  padding: 0 12px;
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.22);
-}
-
 .page-hero {
   padding: 44px 0 22px;
 }
@@ -1084,7 +1052,6 @@ h3 {
   .builder-grid,
   .demo-layout,
   .dashboard-shell,
-  .cta-panel,
   .login-layout {
     grid-template-columns: 1fr;
   }
@@ -1130,7 +1097,6 @@ h3 {
   .page-actions,
   .form-actions,
   .cta-actions,
-  .email-mock,
   .footer {
     align-items: stretch;
     flex-direction: column;
@@ -1138,8 +1104,7 @@ h3 {
 
   .primary-button,
   .secondary-button,
-  .ghost-button,
-  .email-mock input {
+  .ghost-button {
     width: 100%;
   }
 

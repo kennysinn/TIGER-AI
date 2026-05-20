@@ -48,16 +48,3 @@ if (loginForm) {
     }
   });
 }
-
-const earlyAccessForm = document.querySelector("[data-early-access]");
-
-if (earlyAccessForm) {
-  earlyAccessForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const input = earlyAccessForm.querySelector("input");
-    if (input) {
-      input.value = "";
-      input.placeholder = "Early access preview saved locally";
-    }
-  });
-}
