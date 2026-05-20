@@ -47,6 +47,8 @@ Current static role structure:
 
 See `docs/SUPABASE_ACCESS.md` for Supabase setup notes and redirect URLs.
 
+Sprint 1 database setup is in `docs/SPRINT1_SETUP.md`.
+
 ## GitHub Pages Deployment
 
 1. Push this repository to GitHub.

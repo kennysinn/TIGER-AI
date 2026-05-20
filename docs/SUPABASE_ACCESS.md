@@ -9,8 +9,8 @@ Supabase frontend auth is connected with the provided Project URL and publishabl
 3. Login methods in code:
    - Email + password
    - Google login
-4. Admin email allowlist:
-   - `kennysinn21@gmail.com`
+4. Admin access:
+   - controlled by `profiles.role = 'admin'`
 
 ## Supabase Dashboard Settings Needed
 
@@ -47,7 +47,7 @@ After login:
 2. `admin` routes to `admin-dashboard.html`
 3. logged-out visitors see `public-dashboard.html`
 
-The current static version routes admin access by email allowlist. The production version should store roles in `profiles.role` and enforce access with Row Level Security.
+Admin routing now checks `profiles.role`. Row Level Security should remain enabled for all real user data.
 
 ## Suggested Tables
 

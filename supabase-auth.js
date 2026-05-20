@@ -1,7 +1,6 @@
 (function () {
   const SUPABASE_URL = "https://frtvuwslnuuwcgqwszra.supabase.co";
   const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_ZRcnmOC6x-9TNP2ULMZtCg_LTbc1r3t";
-  const ADMIN_EMAILS = ["kennysinn21@gmail.com"];
 
   if (!window.supabase) {
     return;
@@ -26,12 +25,62 @@
     }
   };
 
-  const isAdmin = (user) => {
-    return Boolean(user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
+  const setAuthError = (message) => {
+    document.querySelectorAll("[data-auth-error]").forEach((target) => {
+      target.textContent = message || "";
+      target.hidden = !message;
+    });
   };
 
-  const dashboardFor = (user) => {
-    return isAdmin(user) ? "admin-dashboard.html" : "user-dashboard.html";
+  const profilePayloadFor = (user) => {
+    return {
+      id: user.id,
+      email: user.email,
+      full_name: user.user_metadata?.full_name || user.user_metadata?.name || "",
+      role: "user",
+      plan: "free",
+      account_status: "active"
+    };
+  };
+
+  const ensureProfile = async (user) => {
+    if (!user) {
+      return null;
+    }
+
+    const { data, error } = await client
+      .from("profiles")
+      .select("id,email,full_name,role,plan,account_status")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      throw error;
+    }
+
+    if (data) {
+      return data;
+    }
+
+    const { data: created, error: createError } = await client
+      .from("profiles")
+      .upsert(profilePayloadFor(user), { onConflict: "id" })
+      .select("id,email,full_name,role,plan,account_status")
+      .single();
+
+    if (createError) {
+      throw createError;
+    }
+
+    return created;
+  };
+
+  const isAdminProfile = (profile) => {
+    return profile?.role === "admin" && profile?.account_status === "active";
+  };
+
+  const dashboardFor = (profile) => {
+    return isAdminProfile(profile) ? "admin-dashboard.html" : "user-dashboard.html";
   };
 
   const getNextPage = () => {
@@ -40,20 +89,36 @@
     return ALLOWED_NEXT_PAGES.has(next) ? next : "";
   };
 
-  const routeAfterAuth = (user) => {
+  const routeAfterAuth = async (user) => {
     const next = getNextPage();
+    let profile;
 
-    if (next === "admin-dashboard.html" && !isAdmin(user)) {
+    try {
+      profile = await ensureProfile(user);
+    } catch (error) {
+      setStatus(`Profile setup failed: ${error.message}`);
+      return;
+    }
+
+    if (next === "admin-dashboard.html" && !isAdminProfile(profile)) {
       window.location.href = "user-dashboard.html";
       return;
     }
 
-    window.location.href = next || dashboardFor(user);
+    window.location.href = next || dashboardFor(profile);
   };
 
-  const updateAccountUi = (user) => {
+  const updateAccountUi = (user, profile) => {
     document.querySelectorAll("[data-account-email]").forEach((target) => {
       target.textContent = user?.email || "Not signed in";
+    });
+
+    document.querySelectorAll("[data-account-role]").forEach((target) => {
+      target.textContent = profile?.role || "guest";
+    });
+
+    document.querySelectorAll("[data-account-plan]").forEach((target) => {
+      target.textContent = profile?.plan || "free";
     });
   };
 
@@ -65,11 +130,21 @@
   const routeIfNeeded = async () => {
     const { data } = await client.auth.getSession();
     const user = data.session?.user;
+    let profile = null;
 
-    updateAccountUi(user);
+    if (user) {
+      try {
+        profile = await ensureProfile(user);
+        setAuthError("");
+      } catch (error) {
+        setAuthError(`Database setup needed: ${error.message}`);
+      }
+    }
+
+    updateAccountUi(user, profile);
 
     if (page === "login" && user) {
-      routeAfterAuth(user);
+      await routeAfterAuth(user);
       return;
     }
 
@@ -82,7 +157,7 @@
       return;
     }
 
-    if (requiredRole === "admin" && !isAdmin(user)) {
+    if (requiredRole === "admin" && !isAdminProfile(profile)) {
       window.location.href = "user-dashboard.html";
     }
   };
@@ -113,7 +188,7 @@
         return;
       }
 
-      routeAfterAuth(data.user);
+      await routeAfterAuth(data.user);
     });
 
     signupButton?.addEventListener("click", async () => {
@@ -133,7 +208,7 @@
       }
 
       if (data.session?.user) {
-        routeAfterAuth(data.session.user);
+        await routeAfterAuth(data.session.user);
         return;
       }
 
@@ -188,8 +263,31 @@
   };
 
   client.auth.onAuthStateChange((_event, session) => {
-    updateAccountUi(session?.user);
+    if (!session?.user) {
+      updateAccountUi(null, null);
+      return;
+    }
+
+    ensureProfile(session.user)
+      .then((profile) => updateAccountUi(session.user, profile))
+      .catch((error) => setAuthError(error.message));
   });
+
+  window.TigerAuth = {
+    client,
+    ensureProfile,
+    getSession: () => client.auth.getSession(),
+    getUser: async () => {
+      const { data } = await client.auth.getSession();
+      return data.session?.user || null;
+    },
+    getProfile: async () => {
+      const { data } = await client.auth.getSession();
+      return data.session?.user ? ensureProfile(data.session.user) : null;
+    },
+    isAdminProfile,
+    dashboardFor
+  };
 
   bindAuthForm();
   bindLogout();

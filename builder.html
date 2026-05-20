@@ -7,7 +7,7 @@
     <meta name="description" content="Create and train an AI employee in Tiger AI.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body data-auth-required="user">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Tiger AI home">
         <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
@@ -31,10 +31,12 @@
         <div class="page-intro">
           <div>
             <p class="eyebrow">Step 02</p>
-            <h1>Train your first AI employee.</h1>
+            <h1>Set up your AI company.</h1>
           </div>
-          <p>Selected template: <strong data-template-name>AI Admin Company</strong>. Workspace saving comes after signup.</p>
+          <p><strong data-company-name>Loading company...</strong> · <span data-company-type>Loading type...</span></p>
         </div>
+        <p class="inline-status" data-auth-error hidden></p>
+        <p class="inline-status" data-data-status hidden></p>
       </section>
 
       <div class="progress-strip">
@@ -47,68 +49,77 @@
       <section class="builder-grid">
         <div class="builder-main">
           <article class="step-panel">
-            <span class="step-number">Employee Studio</span>
-            <h2>Create role settings</h2>
-            <p>Set role, language, and handover rules.</p>
-            <form class="form-grid">
+            <span class="step-number">Company Setup</span>
+            <h2>Save your AI company profile</h2>
+            <p>This is the first real saved object in the Tiger AI workspace.</p>
+            <form class="form-grid" data-company-form>
               <label>
-                Employee name
-                <input value="AI Admin Assistant">
+                Company name
+                <input name="company_name" placeholder="AI Admin Company">
+              </label>
+              <label>
+                Target customer
+                <input name="target_customer" placeholder="SME owners and operators">
+              </label>
+              <label>
+                Service type
+                <input name="service_type" placeholder="Admin replies and quotation support">
               </label>
               <label>
                 Primary language
-                <select>
-                  <option>English + Mandarin + Malay mixed support</option>
-                  <option>English only</option>
-                  <option>Mandarin first</option>
-                </select>
+                <input name="primary_language" placeholder="English + Mandarin + Malay">
               </label>
               <label>
-                Role instruction
-                <textarea>Answer customer questions, draft quotation replies, collect missing details, and hand over uncertain cases.</textarea>
+                Pricing direction
+                <input name="pricing_direction" placeholder="Starter retainer from RM299/month">
               </label>
+              <label>
+                Description
+                <textarea name="description" placeholder="Describe what this AI company helps clients do."></textarea>
+              </label>
+              <button class="primary-button" type="submit">Save AI company</button>
             </form>
           </article>
 
           <article class="step-panel">
-            <span class="step-number">Knowledge Trainer</span>
-            <h2>Upload business knowledge</h2>
-            <p>Upload files and spot missing knowledge.</p>
+            <span class="step-number">Saved Workspace</span>
+            <h2>Company data foundation</h2>
+            <p>Your company is now saved to Supabase and tied to your login.</p>
             <div class="training-card">
               <div class="file-chip">
-                <span>company-faq.pdf</span>
-                <strong>Loaded</strong>
+                <span>profiles</span>
+                <strong>Active</strong>
               </div>
               <div class="file-chip">
-                <span>pricing-policy.docx</span>
-                <strong>Missing</strong>
+                <span>ai_companies</span>
+                <strong>Active</strong>
               </div>
             </div>
           </article>
 
           <article class="step-panel">
             <span class="step-number">Readiness Score</span>
-            <h2>Demo readiness check</h2>
+            <h2>What comes next</h2>
             <div class="readiness-card">
               <div class="score-grid">
                 <div class="score-tile">
-                  <span>Knowledge coverage</span>
-                  <strong>72%</strong>
-                  <div class="meter"><i style="width: 72%"></i></div>
+                  <span>Sprint 1</span>
+                  <strong>Company</strong>
+                  <div class="meter"><i style="width: 100%"></i></div>
                 </div>
                 <div class="score-tile">
-                  <span>Answer accuracy</span>
-                  <strong>81%</strong>
-                  <div class="meter"><i style="width: 81%"></i></div>
+                  <span>Sprint 2</span>
+                  <strong>Employee</strong>
+                  <div class="meter"><i style="width: 20%"></i></div>
                 </div>
               </div>
               <div class="readiness-row warning">
-                <span>Missing information</span>
-                <strong>Pricing, refund policy, service area</strong>
+                <span>Not built yet</span>
+                <strong>AI employees, business kits, demo links</strong>
               </div>
               <div class="readiness-row">
-                <span>Demo readiness</span>
-                <strong>Ready for controlled demo</strong>
+                <span>Current status</span>
+                <strong>AI company saved</strong>
               </div>
               <div class="form-actions">
                 <a class="secondary-button" href="templates.html">Change template</a>
@@ -120,22 +131,25 @@
 
         <aside class="next-box" aria-label="What happens next">
           <p class="eyebrow">What happens next?</p>
-          <h2>From training to sales asset.</h2>
+          <h2>Next sprint: AI employee.</h2>
           <ul class="compact-list">
-            <li>Test employee replies with example client questions</li>
-            <li>Generate business kit: proposal, pricing, and onboarding form</li>
-            <li>Share demo link with a prospect</li>
-            <li>Collect proposal request and follow-up script</li>
+            <li>Create AI employee profile</li>
+            <li>Attach employee to this company</li>
+            <li>Generate starter business kit</li>
+            <li>Prepare demo link structure</li>
           </ul>
-          <a class="primary-button" href="demo.html">Preview demo link</a>
+          <a class="primary-button" href="user-dashboard.html">View dashboard</a>
         </aside>
       </section>
     </main>
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>Next: package the employee into a client-ready demo.</span>
+      <span>Sprint 1: real AI company data foundation.</span>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
+    <script src="supabase-auth.js"></script>
+    <script src="tiger-data.js"></script>
   </body>
 </html>

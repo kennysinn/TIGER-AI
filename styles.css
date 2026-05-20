@@ -189,6 +189,50 @@ textarea {
   background: transparent;
 }
 
+.inline-status {
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px 0 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  color: var(--silver);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.company-list {
+  display: grid;
+  gap: 10px;
+}
+
+.company-item,
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.company-item h3,
+.empty-state h3 {
+  margin-bottom: 4px;
+}
+
+.company-item p,
+.empty-state p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.empty-state {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .primary-button:hover,
 .secondary-button:hover,
 .ghost-button:hover {

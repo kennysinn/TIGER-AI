@@ -44,57 +44,59 @@
           </div>
           <p>For registered users building AI companies, training employees, and managing demos.</p>
         </div>
+        <p class="inline-status" data-auth-error hidden></p>
+        <p class="inline-status" data-data-status hidden></p>
 
         <div class="stat-grid">
           <article class="dashboard-card">
             <span class="stat-label">AI Companies</span>
-            <strong>2</strong>
+            <strong data-company-count>0</strong>
             <p>Created.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">AI Employees</span>
-            <strong>5</strong>
-            <p>In progress.</p>
+            <strong>0</strong>
+            <p>Sprint 2.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Demo Links</span>
-            <strong>3</strong>
-            <p>Shared.</p>
+            <strong>0</strong>
+            <p>Sprint 3.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Leads</span>
-            <strong>12</strong>
-            <p>From demos.</p>
+            <strong>0</strong>
+            <p>Sprint 3.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">MRR Target</span>
-            <strong>RM4.5k</strong>
-            <p>Target value.</p>
+            <strong>RM0</strong>
+            <p>Later.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Plan</span>
-            <strong>Builder</strong>
-            <p>Current preview.</p>
+            <strong data-account-plan>free</strong>
+            <p>Current.</p>
           </article>
         </div>
 
         <section class="dashboard-panel-grid">
           <article class="step-panel">
             <p class="eyebrow">Active company</p>
-            <h2>AI Admin Company</h2>
-            <ul class="compact-list">
-              <li>AI Admin Assistant: 81% accuracy</li>
-              <li>Business kit: proposal and pricing ready</li>
-              <li>Demo link: shared with 3 prospects</li>
-            </ul>
+            <h2>Your AI companies</h2>
+            <div class="company-list" data-company-list>
+              <div class="empty-state">
+                <h3>Loading companies...</h3>
+              </div>
+            </div>
           </article>
           <article class="step-panel">
             <p class="eyebrow">Next actions</p>
-            <h2>Improve demo readiness</h2>
+            <h2>Build the next layer</h2>
             <ul class="compact-list">
-              <li>Add pricing rules</li>
-              <li>Add refund policy</li>
-              <li>Send follow-up script</li>
+              <li>Create AI employee profile</li>
+              <li>Generate starter business kit</li>
+              <li>Create first demo link</li>
             </ul>
           </article>
         </section>
@@ -129,5 +131,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
     <script src="supabase-auth.js"></script>
+    <script src="tiger-data.js"></script>
   </body>
 </html>
