@@ -23,6 +23,8 @@ For Google login, add the production redirect URL:
 
 `https://kennysinn.github.io/TIGER-AI/login.html`
 
+The same URL is also used for email confirmation and password reset.
+
 Also add the local URL later if testing locally with a server.
 
 ## Do Not Send
