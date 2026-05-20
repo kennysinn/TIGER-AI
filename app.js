@@ -1,20 +1,41 @@
-const loginDialog = document.querySelector(".login-dialog");
-const loginButtons = document.querySelectorAll("[data-open-login]");
+const navLinks = document.querySelectorAll(".main-nav a");
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-loginButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (typeof loginDialog.showModal === "function") {
-      loginDialog.showModal();
-      return;
-    }
-
-    loginDialog.setAttribute("open", "");
-  });
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && loginDialog.open) {
-    loginDialog.close();
+navLinks.forEach((link) => {
+  const href = link.getAttribute("href");
+  if (href === currentPage || (currentPage === "" && href === "index.html")) {
+    link.classList.add("active");
   }
 });
 
+const templateButtons = document.querySelectorAll("[data-template]");
+
+templateButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    localStorage.setItem("tiger-ai-template", button.dataset.template);
+  });
+});
+
+const chosenTemplate = localStorage.getItem("tiger-ai-template");
+const templateName = document.querySelector("[data-template-name]");
+
+if (templateName && chosenTemplate) {
+  const names = {
+    admin: "AI Admin Company",
+    support: "AI Customer Support Company",
+    content: "AI Content Agency"
+  };
+  templateName.textContent = names[chosenTemplate] || names.admin;
+}
+
+const loginForm = document.querySelector("[data-login-form]");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const status = document.querySelector("[data-login-status]");
+    if (status) {
+      status.textContent = "Prototype login ready. Next phase connects Supabase Auth.";
+    }
+  });
+}

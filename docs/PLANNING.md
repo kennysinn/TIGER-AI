@@ -124,11 +124,11 @@ Recommended stack:
 
 Output:
 
-1. Public landing/app hybrid page
-2. Login modal mock
-3. Template cards
-4. Dashboard preview
-5. Demo link preview
+1. Public homepage
+2. Template selection page
+3. AI employee builder page
+4. Client demo link page
+5. Dashboard and login preview page
 
 ### Phase 2: Real Login and Database
 
@@ -197,7 +197,7 @@ Recommended integrations:
 
 ## Design Direction
 
-The UI should feel like an operator dashboard for building an AI service company.
+The UI should feel like an operator dashboard for building an AI service company. The visual direction should follow the Tiger AI logo style: dark background, metallic silver surfaces, angular lines, and electric cyan highlights.
 
 Visual principles:
 
@@ -233,4 +233,3 @@ After backend features are added:
 2. Add Supabase project
 3. Add serverless API for AI calls
 4. Keep secrets out of frontend code
-

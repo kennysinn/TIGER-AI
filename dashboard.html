@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Workspace Dashboard | Tiger AI</title>
+    <meta name="description" content="Tiger AI workspace dashboard and login preview.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI home">
+        <img class="brand-logo" src="assets/tiger-ai-logo.svg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="builder.html">Builder</a>
+        <a href="demo.html">Demo Link</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-button" href="demo.html">Back</a>
+        <a class="primary-button" href="templates.html">New company</a>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="dashboard-nav" aria-label="Workspace navigation">
+        <a class="active" href="dashboard.html">Overview</a>
+        <a href="templates.html">Company Templates</a>
+        <a href="builder.html">AI Employees</a>
+        <a href="demo.html">Demo Links</a>
+        <a href="dashboard.html">Subscription</a>
+      </aside>
+
+      <section>
+        <div class="page-intro">
+          <div>
+            <p class="eyebrow">Step 04</p>
+            <h1>Operate your AI service business.</h1>
+          </div>
+          <p>This will become the logged-in workspace after Supabase Auth and database are connected.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="dashboard-card">
+            <span class="stat-label">Demo links</span>
+            <strong>3</strong>
+            <p>Client-ready demos created.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Leads</span>
+            <strong>12</strong>
+            <p>Prospects from demo forms.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">MRR target</span>
+            <strong>RM 4.5k</strong>
+            <p>Projected from active proposals.</p>
+          </article>
+        </div>
+
+        <article class="login-card">
+          <p class="eyebrow">Workspace Login Prototype</p>
+          <h2>Login will come first in the real MVP.</h2>
+          <p>For the next development phase, this form should connect to Supabase Auth.</p>
+          <form class="form-grid" data-login-form>
+            <label>
+              Email
+              <input type="email" placeholder="you@company.com" autocomplete="email">
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="Minimum 8 characters" autocomplete="current-password">
+            </label>
+            <button class="primary-button" type="submit">Log in</button>
+            <p data-login-status></p>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>Phase 2: real login, saved companies, and database.</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
+

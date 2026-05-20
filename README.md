@@ -8,16 +8,25 @@ This version is designed for GitHub Pages and uses plain HTML, CSS, and JavaScri
 
 Included:
 
-1. Product positioning page
-2. Login modal prototype
-3. AI company template cards
-4. AI employee dashboard preview
-5. Business kit and demo link previews
-6. Product planning document
+1. Multi-page product flow
+2. Logo-inspired dark metallic brand system
+3. AI company template selection
+4. AI employee builder prototype
+5. Business kit and demo link preview
+6. Dashboard and login prototype
+7. Product planning document
 
 ## Open Locally
 
 Open `index.html` directly in a browser.
+
+Pages:
+
+1. `index.html`
+2. `templates.html`
+3. `builder.html`
+4. `demo.html`
+5. `dashboard.html`
 
 ## GitHub Pages Deployment
 
@@ -35,4 +44,3 @@ The site will be available at:
 ## Product Plan
 
 See `docs/PLANNING.md`.
-
