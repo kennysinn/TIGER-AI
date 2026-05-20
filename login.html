@@ -7,7 +7,7 @@
     <meta name="description" content="Tiger AI login and role routing preview.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body data-auth-page="login">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Tiger AI home">
         <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
@@ -30,46 +30,40 @@
       <section class="page-hero">
         <div class="page-intro">
           <div>
-            <p class="eyebrow">Login preview</p>
-            <h1>Route users to the right dashboard.</h1>
+            <p class="eyebrow">Workspace Login</p>
+            <h1>Log in to Tiger AI.</h1>
           </div>
-          <p>Frontend-only for now. Supabase will authenticate users and load their role later.</p>
+          <p>Email/password and Google login are connected through Supabase.</p>
         </div>
       </section>
 
       <section class="login-layout">
         <article class="login-card">
-          <p class="eyebrow">Workspace Login</p>
-          <h2>Choose a preview role</h2>
-          <form class="form-grid" data-login-form>
+          <p class="eyebrow">Account Access</p>
+          <h2>Enter your workspace</h2>
+          <form class="form-grid" data-auth-form>
             <label>
               Email
-              <input type="email" placeholder="you@company.com" autocomplete="email">
+              <input type="email" placeholder="you@company.com" autocomplete="email" data-auth-email required>
             </label>
             <label>
               Password
-              <input type="password" placeholder="Minimum 8 characters" autocomplete="current-password">
+              <input type="password" placeholder="Minimum 6 characters" autocomplete="current-password" data-auth-password required>
             </label>
-            <label>
-              Dashboard role
-              <select data-login-role>
-                <option value="user-dashboard.html">Customer user dashboard</option>
-                <option value="admin-dashboard.html">Admin dashboard</option>
-                <option value="public-dashboard.html">Non-registered public dashboard</option>
-              </select>
-            </label>
-            <button class="primary-button" type="submit">Continue to dashboard</button>
-            <p data-login-status></p>
+            <button class="primary-button" type="submit">Log in</button>
+            <button class="secondary-button" type="button" data-auth-signup>Create account</button>
+            <button class="ghost-button" type="button" data-auth-google>Continue with Google</button>
+            <p data-auth-status></p>
           </form>
         </article>
 
         <article class="step-panel">
-          <p class="eyebrow">Role structure</p>
-          <h2>Three dashboard types</h2>
+          <p class="eyebrow">Dashboard routing</p>
+          <h2>Role-based access</h2>
           <ul class="compact-list">
             <li><strong>Public:</strong> visitor preview, no account needed</li>
-            <li><strong>User:</strong> customer workspace after signup</li>
-            <li><strong>Admin:</strong> internal platform console</li>
+            <li><strong>User:</strong> customer workspace after login</li>
+            <li><strong>Admin:</strong> internal console for approved admin email</li>
           </ul>
         </article>
       </section>
@@ -77,9 +71,10 @@
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>Supabase auth will replace this static role selector.</span>
+      <span>Supabase auth is connected. Data saving comes next.</span>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
+    <script src="supabase-auth.js"></script>
   </body>
 </html>
-

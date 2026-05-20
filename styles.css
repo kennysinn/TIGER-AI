@@ -135,7 +135,8 @@ textarea {
 .primary-button,
 .secondary-button,
 .ghost-button,
-.text-link {
+.text-link,
+.auth-pill {
   display: inline-flex;
   min-height: 40px;
   align-items: center;
@@ -147,6 +148,15 @@ textarea {
   font-size: 14px;
   font-weight: 850;
   white-space: nowrap;
+}
+
+.auth-pill {
+  max-width: 220px;
+  overflow: hidden;
+  border-color: var(--line);
+  color: var(--silver);
+  background: rgba(255, 255, 255, 0.04);
+  text-overflow: ellipsis;
 }
 
 .primary-button {

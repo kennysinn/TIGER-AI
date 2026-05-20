@@ -7,7 +7,7 @@
     <meta name="description" content="Tiger AI customer user dashboard.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body data-auth-required="user">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Tiger AI home">
         <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
@@ -21,7 +21,8 @@
         <a href="index.html#pricing">Pricing</a>
       </nav>
       <div class="header-actions">
-        <a class="ghost-button" href="login.html">Switch role</a>
+        <span class="auth-pill" data-account-email>Checking session...</span>
+        <button class="ghost-button" type="button" data-auth-logout>Log out</button>
         <a class="primary-button" href="templates.html">New company</a>
       </div>
     </header>
@@ -123,9 +124,10 @@
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>User dashboard preview. Real data connects after Supabase.</span>
+      <span>User dashboard. Saved data comes next.</span>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
+    <script src="supabase-auth.js"></script>
   </body>
 </html>
-

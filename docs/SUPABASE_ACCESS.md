@@ -1,20 +1,29 @@
-# Supabase Access Needed
+# Supabase Auth Setup
 
-To connect real login, Tiger AI only needs public frontend auth credentials first.
+Supabase frontend auth is connected with the provided Project URL and publishable key.
 
-## Please Provide
+## Current Config
 
-1. Supabase Project URL
-   - Looks like: `https://xxxx.supabase.co`
-2. Supabase anon public key
-   - This is safe for frontend use.
-   - Do not send the service role key.
-3. Login methods you want enabled
+1. Project URL: `https://frtvuwslnuuwcgqwszra.supabase.co`
+2. Key type: publishable frontend key
+3. Login methods in code:
    - Email + password
-   - Magic link
    - Google login
-4. Admin email address
-   - The first email that should route to the admin dashboard.
+4. Admin email allowlist:
+   - `kennysinn21@gmail.com`
+
+## Supabase Dashboard Settings Needed
+
+In Supabase, enable:
+
+1. Authentication > Providers > Email
+2. Authentication > Providers > Google
+
+For Google login, add the production redirect URL:
+
+`https://kennysinn.github.io/TIGER-AI/login.html`
+
+Also add the local URL later if testing locally with a server.
 
 ## Do Not Send
 
@@ -36,6 +45,8 @@ After login:
 2. `admin` routes to `admin-dashboard.html`
 3. logged-out visitors see `public-dashboard.html`
 
+The current static version routes admin access by email allowlist. The production version should store roles in `profiles.role` and enforce access with Row Level Security.
+
 ## Suggested Tables
 
 1. `profiles`
@@ -45,3 +56,6 @@ After login:
 5. `leads`
 6. `subscriptions`
 
+## Security Note
+
+Static HTML pages are not a real security boundary. Sensitive admin data should never be placed directly in static files. When real data is added, protect it with Supabase Auth, role checks, and Row Level Security policies.

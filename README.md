@@ -41,11 +41,11 @@ Current static role structure:
 2. Customer users: `user-dashboard.html`
 3. Admin users: `admin-dashboard.html`
 
-`login.html` is currently a frontend-only role routing preview.
+`login.html` now connects to Supabase Auth for email/password and Google login. Admin routing currently uses an email allowlist.
 
 ## Supabase
 
-See `docs/SUPABASE_ACCESS.md` for the access needed to connect real login.
+See `docs/SUPABASE_ACCESS.md` for Supabase setup notes and redirect URLs.
 
 ## GitHub Pages Deployment
 
