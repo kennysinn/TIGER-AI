@@ -87,8 +87,8 @@ textarea {
 
 .brand-logo {
   display: block;
-  width: 138px;
-  height: 42px;
+  width: 146px;
+  height: 50px;
   border-radius: var(--radius);
   object-fit: cover;
   object-position: center;
@@ -996,8 +996,8 @@ h3 {
   }
 
   .brand-logo {
-    width: 132px;
-    height: 40px;
+    width: 140px;
+    height: 48px;
   }
 
   .main-nav {
