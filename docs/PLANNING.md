@@ -128,7 +128,7 @@ Output:
 2. Template selection page
 3. AI employee builder page
 4. Client demo link page
-5. Dashboard and login preview page
+5. Dashboard, login preview, and subscription pricing page sections
 
 ### Phase 2: Real Login and Database
 
@@ -205,7 +205,7 @@ Visual principles:
 2. Copy should be direct and business-oriented.
 3. Use compact dashboards, template cards, score panels, and client demo previews.
 4. Keep the tone premium but practical.
-5. Avoid looking like an AI course, generic chatbot builder, or crypto-style dashboard.
+5. Avoid looking like an AI course, generic chatbot builder, or speculative finance dashboard.
 
 ## First Website Sections
 

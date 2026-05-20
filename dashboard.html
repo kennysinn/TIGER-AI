@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Workspace Dashboard | Tiger AI</title>
-    <meta name="description" content="Tiger AI workspace dashboard and login preview.">
+    <meta name="description" content="Tiger AI workspace dashboard and subscription preview.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -18,6 +18,7 @@
         <a href="builder.html">Builder</a>
         <a href="demo.html">Demo Link</a>
         <a href="dashboard.html">Dashboard</a>
+        <a href="index.html#pricing">Pricing</a>
       </nav>
       <div class="header-actions">
         <a class="ghost-button" href="demo.html">Back</a>
@@ -28,43 +29,58 @@
     <main class="dashboard-shell">
       <aside class="dashboard-nav" aria-label="Workspace navigation">
         <a class="active" href="dashboard.html">Overview</a>
-        <a href="templates.html">Company Templates</a>
+        <a href="templates.html">AI Companies</a>
         <a href="builder.html">AI Employees</a>
         <a href="demo.html">Demo Links</a>
-        <a href="dashboard.html">Subscription</a>
+        <a href="dashboard.html#subscription">Subscription</a>
       </aside>
 
-      <section>
+      <section class="dashboard-content">
         <div class="page-intro">
           <div>
             <p class="eyebrow">Step 04</p>
             <h1>Operate your AI service business.</h1>
           </div>
-          <p>This will become the logged-in workspace after Supabase Auth and database are connected.</p>
+          <p>Account workspace will be available after signup. This preview shows the operating model for the full product.</p>
         </div>
 
-        <div class="dashboard-grid">
+        <div class="stat-grid">
           <article class="dashboard-card">
-            <span class="stat-label">Demo links</span>
+            <span class="stat-label">AI Companies</span>
+            <strong>2</strong>
+            <p>Service businesses created.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">AI Employees</span>
+            <strong>5</strong>
+            <p>Trained roles in progress.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Demo Links</span>
             <strong>3</strong>
-            <p>Client-ready demos created.</p>
+            <p>Client-ready demos shared.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">Leads</span>
             <strong>12</strong>
-            <p>Prospects from demo forms.</p>
+            <p>Prospects from demos.</p>
           </article>
           <article class="dashboard-card">
-            <span class="stat-label">MRR target</span>
-            <strong>RM 4.5k</strong>
-            <p>Projected from active proposals.</p>
+            <span class="stat-label">MRR Target</span>
+            <strong>RM4.5k</strong>
+            <p>Projected proposal value.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Plan</span>
+            <strong>Builder</strong>
+            <p>Suggested subscription.</p>
           </article>
         </div>
 
         <article class="login-card">
-          <p class="eyebrow">Workspace Login Prototype</p>
-          <h2>Login will come first in the real MVP.</h2>
-          <p>For the next development phase, this form should connect to Supabase Auth.</p>
+          <p class="eyebrow">Workspace Access Preview</p>
+          <h2>Account workspace will be available after signup.</h2>
+          <p>This form shows the future workspace access flow. Authentication, database, and saved workspaces are not connected in this static version.</p>
           <form class="form-grid" data-login-form>
             <label>
               Email
@@ -74,16 +90,76 @@
               Password
               <input type="password" placeholder="Minimum 8 characters" autocomplete="current-password">
             </label>
-            <button class="primary-button" type="submit">Log in</button>
+            <button class="primary-button" type="submit">Preview workspace access</button>
             <p data-login-status></p>
           </form>
         </article>
+
+        <section id="subscription" aria-labelledby="subscription-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Subscription Plan</p>
+              <h2 id="subscription-title">Pricing preview for early access.</h2>
+            </div>
+            <p class="section-lede">Payment is not connected yet. This section shows how the SaaS subscription could be presented.</p>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <span class="plan-label">Free</span>
+              <h3>Explore</h3>
+              <div class="price">RM0</div>
+              <ul class="compact-list">
+                <li>1 AI employee</li>
+                <li>1 demo link</li>
+                <li>Limited test messages</li>
+                <li>No business kit export</li>
+              </ul>
+              <a class="secondary-button" href="templates.html">Try template</a>
+            </article>
+            <article class="pricing-card">
+              <span class="plan-label">Starter</span>
+              <h3>First AI service</h3>
+              <div class="price">RM99<small>/month</small></div>
+              <ul class="compact-list">
+                <li>3 AI employees</li>
+                <li>1 AI company profile</li>
+                <li>Basic business kit</li>
+                <li>Demo link</li>
+              </ul>
+              <a class="secondary-button" href="templates.html">Start building</a>
+            </article>
+            <article class="pricing-card featured">
+              <span class="plan-label">Builder</span>
+              <h3>Most relevant</h3>
+              <div class="price">RM299<small>/month</small></div>
+              <ul class="compact-list">
+                <li>10 AI employees</li>
+                <li>3 AI company profiles</li>
+                <li>Proposal and pricing generators</li>
+                <li>Client demo links and basic dashboard</li>
+              </ul>
+              <a class="primary-button" href="templates.html">Choose Builder</a>
+            </article>
+            <article class="pricing-card">
+              <span class="plan-label">Agency</span>
+              <h3>Client operations</h3>
+              <div class="price">RM799<small>/month</small></div>
+              <ul class="compact-list">
+                <li>Unlimited AI employees</li>
+                <li>Client workspaces</li>
+                <li>White-label demo links</li>
+                <li>Team access and priority support</li>
+              </ul>
+              <a class="secondary-button" href="demo.html">View demo system</a>
+            </article>
+          </div>
+        </section>
       </section>
     </main>
 
     <footer class="footer">
       <strong>Tiger AI</strong>
-      <span>Phase 2: real login, saved companies, and database.</span>
+      <span>Phase 2: real signup, saved companies, database, and AI generation APIs.</span>
     </footer>
     <script src="app.js"></script>
   </body>

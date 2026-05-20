@@ -10,11 +10,12 @@ Included:
 
 1. Multi-page product flow
 2. Logo-inspired dark metallic brand system
-3. AI company template selection
-4. AI employee builder prototype
-5. Business kit and demo link preview
-6. Dashboard and login prototype
-7. Product planning document
+3. Commercial landing sections for positioning and conversion
+4. AI company template selection
+5. AI employee builder prototype
+6. Business kit and demo link preview
+7. Dashboard, login preview, and subscription pricing preview
+8. Product planning document
 
 ## Open Locally
 

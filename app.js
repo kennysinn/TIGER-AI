@@ -23,7 +23,8 @@ if (templateName && chosenTemplate) {
   const names = {
     admin: "AI Admin Company",
     support: "AI Customer Support Company",
-    content: "AI Content Agency"
+    content: "AI Content Agency",
+    sales: "AI Sales Follow-up Company"
   };
   templateName.textContent = names[chosenTemplate] || names.admin;
 }
@@ -35,7 +36,20 @@ if (loginForm) {
     event.preventDefault();
     const status = document.querySelector("[data-login-status]");
     if (status) {
-      status.textContent = "Prototype login ready. Next phase connects Supabase Auth.";
+      status.textContent = "Workspace access preview only. Real signup will be added in the full MVP.";
+    }
+  });
+}
+
+const earlyAccessForm = document.querySelector("[data-early-access]");
+
+if (earlyAccessForm) {
+  earlyAccessForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const input = earlyAccessForm.querySelector("input");
+    if (input) {
+      input.value = "";
+      input.placeholder = "Early access preview saved locally";
     }
   });
 }
