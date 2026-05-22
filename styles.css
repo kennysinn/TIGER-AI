@@ -159,6 +159,26 @@ textarea {
   text-overflow: ellipsis;
 }
 
+.language-toggle {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cyan-line);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  color: var(--cyan);
+  background: rgba(0, 184, 230, 0.09);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.language-toggle:hover {
+  background: var(--cyan-soft);
+}
+
 .primary-button {
   color: #021017;
   background: linear-gradient(135deg, #effaff, var(--cyan));
@@ -1449,7 +1469,8 @@ h3 {
 
   .primary-button,
   .secondary-button,
-  .ghost-button {
+  .ghost-button,
+  .language-toggle {
     width: 100%;
   }
 
