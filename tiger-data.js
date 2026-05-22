@@ -122,9 +122,13 @@
 
   const setDataStatus = (message) => {
     document.querySelectorAll("[data-data-status]").forEach((target) => {
-      target.textContent = message || "";
+      target.textContent = window.TigerI18n?.translate(message) || message || "";
       target.hidden = !message;
     });
+  };
+
+  const translate = (text) => {
+    return window.TigerI18n?.translate(text) || text;
   };
 
   const getCurrentFile = () => {
@@ -234,33 +238,35 @@
     }
 
     document.querySelectorAll("[data-company-name]").forEach((target) => {
-      target.textContent = data.company_name;
+      target.textContent = translate(data.company_name);
     });
     document.querySelectorAll("[data-company-type]").forEach((target) => {
-      target.textContent = data.company_type;
+      target.textContent = translate(data.company_type);
     });
 
     const template = getTemplate(data.template_key);
     document.querySelectorAll("[data-template-problem]").forEach((target) => {
-      target.textContent = template.problem;
+      target.textContent = translate(template.problem);
     });
     document.querySelectorAll("[data-result-promised]").forEach((target) => {
-      target.textContent = template.result_promised;
+      target.textContent = translate(template.result_promised);
       if ("value" in target) {
-        target.value = template.result_promised;
+        target.dataset.i18nValueOriginal = template.result_promised;
+        target.value = translate(template.result_promised);
       }
     });
     document.querySelectorAll("[data-handover-rule]").forEach((target) => {
-      target.textContent = template.handover_rule;
+      target.textContent = translate(template.handover_rule);
       if ("value" in target) {
-        target.value = template.handover_rule;
+        target.dataset.i18nValueOriginal = template.handover_rule;
+        target.value = translate(template.handover_rule);
       }
     });
     document.querySelectorAll("[data-template-employees]").forEach((target) => {
-      target.innerHTML = template.employees.map((employee) => `<span>${employee}</span>`).join("");
+      target.innerHTML = template.employees.map((employee) => `<span>${translate(employee)}</span>`).join("");
     });
     document.querySelectorAll("[data-template-knowledge]").forEach((target) => {
-      target.innerHTML = template.knowledge.map((item) => `<li>${item}</li>`).join("");
+      target.innerHTML = template.knowledge.map((item) => `<li>${translate(item)}</li>`).join("");
     });
 
     const form = document.querySelector("[data-company-form]");
@@ -297,7 +303,7 @@
       }
 
       document.querySelectorAll("[data-company-name]").forEach((target) => {
-        target.textContent = form.company_name.value.trim();
+        target.textContent = translate(form.company_name.value.trim());
       });
       setDataStatus("Company saved.");
     });
@@ -312,11 +318,12 @@
     if (!companies.length) {
       list.innerHTML = `
         <div class="empty-state">
-          <h3>You have not created an AI company yet.</h3>
-          <p>Choose a template to start.</p>
-          <a class="primary-button" href="templates.html">Choose a template</a>
+          <h3>${translate("You have not created an AI company yet.")}</h3>
+          <p>${translate("Choose a template to start.")}</p>
+          <a class="primary-button" href="templates.html">${translate("Choose a template")}</a>
         </div>
       `;
+      window.TigerI18n?.applyCurrent();
       return;
     }
 
@@ -324,12 +331,14 @@
       <article class="company-item">
         <div>
           <span class="template-code">${company.status || "draft"}</span>
-          <h3>${company.company_name}</h3>
-          <p>${getTemplate(company.template_key).result_promised}</p>
+          <h3>${translate(company.company_name)}</h3>
+          <p>${translate(getTemplate(company.template_key).result_promised)}</p>
         </div>
-        <a class="secondary-button" href="builder.html?company_id=${encodeURIComponent(company.id)}">Open</a>
+        <a class="secondary-button" href="builder.html?company_id=${encodeURIComponent(company.id)}">${translate("Open")}</a>
       </article>
     `).join("");
+
+    window.TigerI18n?.applyCurrent();
   };
 
   const loadUserDashboard = async () => {

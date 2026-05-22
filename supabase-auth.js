@@ -18,16 +18,20 @@
     "demo.html"
   ]);
 
+  const translate = (message) => {
+    return window.TigerI18n?.translate(message) || message;
+  };
+
   const setStatus = (message) => {
     const status = document.querySelector("[data-auth-status]");
     if (status) {
-      status.textContent = message;
+      status.textContent = translate(message);
     }
   };
 
   const setAuthError = (message) => {
     document.querySelectorAll("[data-auth-error]").forEach((target) => {
-      target.textContent = message || "";
+      target.textContent = translate(message) || "";
       target.hidden = !message;
     });
   };
@@ -110,15 +114,15 @@
 
   const updateAccountUi = (user, profile) => {
     document.querySelectorAll("[data-account-email]").forEach((target) => {
-      target.textContent = user?.email || "Not signed in";
+      target.textContent = user?.email || translate("Not signed in");
     });
 
     document.querySelectorAll("[data-account-role]").forEach((target) => {
-      target.textContent = profile?.role || "guest";
+      target.textContent = translate(profile?.role || "guest");
     });
 
     document.querySelectorAll("[data-account-plan]").forEach((target) => {
-      target.textContent = profile?.plan || "free";
+      target.textContent = translate(profile?.plan || "free");
     });
   };
 
