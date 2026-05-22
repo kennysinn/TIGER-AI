@@ -33,10 +33,10 @@
           <p class="eyebrow">AI Company Builder Platform</p>
           <h1>Build your AI company. Train your AI employees.</h1>
           <p class="lede">
-            Tiger AI helps freelancers, consultants, agencies, and solopreneurs package AI employees into client-ready AI service businesses with templates, business kits, demo links, and an operating dashboard.
+            Start with a real business pain. Tiger AI creates the AI employees, service package, demo link, and operating dashboard around it.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="templates.html">Start with a template</a>
+            <a class="primary-button" href="#pain-generator">Generate my AI company</a>
             <a class="secondary-button" href="demo.html">View client demo link</a>
           </div>
           <div class="hero-ribbon" aria-label="Product promise">
@@ -97,6 +97,94 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="page-shell section-block generator-section" id="pain-generator" aria-labelledby="generator-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Pain-to-Company Generator</p>
+            <h2 id="generator-title">Choose a business pain. Tiger AI forms the AI company around it.</h2>
+          </div>
+          <p class="section-lede">Every AI employee becomes a sellable service package, not just an experiment.</p>
+        </div>
+
+        <div class="generator-board">
+          <article class="generator-input">
+            <div class="generator-topline">
+              <span class="live-dot"></span>
+              <strong>Business pain input</strong>
+            </div>
+            <label for="pain-input">Describe the pain</label>
+            <textarea id="pain-input" data-pain-input>My target customers lose leads because replies are too slow.</textarea>
+            <div class="pain-choice-grid" aria-label="Example business pains">
+              <button type="button" data-pain-choice="slow">Slow replies</button>
+              <button type="button" data-pain-choice="docs">Manual documents</button>
+              <button type="button" data-pain-choice="followup">Missed follow-ups</button>
+              <button type="button" data-pain-choice="reactivate">Sleeping database</button>
+              <button type="button" data-pain-choice="report">No visibility</button>
+            </div>
+            <button class="primary-button" type="button" data-generate-company>Generate my AI company</button>
+          </article>
+
+          <article class="generated-company" aria-label="Generated AI company output">
+            <div class="generated-header">
+              <div>
+                <p class="eyebrow">Generated AI Company</p>
+                <h3 data-generated-name>Speed-to-Lead AI Company</h3>
+              </div>
+              <span class="template-code">SIMULATED OUTPUT</span>
+            </div>
+
+            <div class="generated-grid">
+              <div class="generated-panel employee-output">
+                <span>Recommended AI Employees</span>
+                <ul data-generated-employees>
+                  <li>AI First Responder</li>
+                  <li>AI Lead Qualifier</li>
+                  <li>AI Sales Handover Assistant</li>
+                </ul>
+              </div>
+              <div class="generated-panel">
+                <span>Service Package</span>
+                <strong data-generated-package>AI Enquiry Response System</strong>
+              </div>
+              <div class="generated-panel">
+                <span>Pricing Suggestion</span>
+                <strong data-generated-pricing>Setup RM1,500-RM3,000<br>Monthly RM500-RM1,500</strong>
+              </div>
+              <div class="generated-panel">
+                <span>Demo Link</span>
+                <strong data-generated-demo>tiger.ai/demo/speed-to-lead</strong>
+              </div>
+            </div>
+
+            <div class="generator-assets">
+              <div>
+                <span>Business Kit</span>
+                <div class="asset-chip-row" data-generated-kit>
+                  <span>Proposal outline</span>
+                  <span>WhatsApp outreach script</span>
+                  <span>Client onboarding form</span>
+                  <span>Monthly report template</span>
+                </div>
+              </div>
+              <div>
+                <span>Monthly Report Metrics</span>
+                <div class="asset-chip-row" data-generated-metrics>
+                  <span>Response time</span>
+                  <span>Qualified leads</span>
+                  <span>Handover count</span>
+                  <span>Missed leads</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="generated-actions">
+              <a class="secondary-button" href="templates.html">Start from this pain</a>
+              <a class="primary-button" href="templates.html">Build this company</a>
+            </div>
+          </article>
         </div>
       </section>
 
