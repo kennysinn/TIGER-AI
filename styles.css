@@ -715,6 +715,42 @@ h3 {
   line-height: 1.55;
 }
 
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.formation-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022));
+  box-shadow: var(--shadow);
+}
+
+.formation-card.featured {
+  border-color: var(--cyan-line);
+  background: linear-gradient(180deg, rgba(0, 184, 230, 0.13), rgba(255, 255, 255, 0.026));
+}
+
+.formation-card > span {
+  display: inline-flex;
+  border: 1px solid var(--cyan-line);
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: var(--cyan);
+  background: rgba(0, 184, 230, 0.1);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.formation-card h3 {
+  margin-top: 16px;
+}
+
 .guide-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1521,6 +1557,7 @@ h3 {
   .pricing-grid,
   .feature-grid,
   .guide-grid,
+  .formation-grid,
   .pain-grid,
   .command-metrics-grid,
   .role-grid {
@@ -1625,6 +1662,7 @@ h3 {
   .pricing-grid,
   .feature-grid,
   .guide-grid,
+  .formation-grid,
   .pain-grid,
   .command-metrics-grid,
   .asset-grid,

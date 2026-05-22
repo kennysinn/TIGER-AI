@@ -814,6 +814,57 @@ Object.assign(languageText, {
   "daily targets": "每日目标"
 });
 
+Object.assign(languageText, {
+  "Start free with an AI Company Consultant. It asks the right questions, diagnoses your founder profile, and recommends a business direction. When you are ready to form the company, Tiger AI's AI brain builds the blueprint and assigns the AI employees.": "先免费使用 AI 公司顾问。它会问对问题、诊断你的 founder profile，并推荐商业方向。当你准备 form company 时，Tiger AI 的 AI 主脑会生成公司蓝图并配置 AI 员工。",
+  "Start free diagnosis": "开始免费诊断",
+  "See paid company formation": "查看付费公司生成",
+  "Free output: recommended direction. Paid next step: form the AI company and assign employees.": "免费输出：推荐方向。付费下一步：生成 AI 公司并配置员工。",
+  "Free first, paid when forming": "先免费，form company 才付费",
+  "Get direction for free. Pay when you form the company.": "免费定方向。Form company 时才付费。",
+  "Tiger AI keeps the confusing first step free. The paid value begins when the founder turns direction into an operating one-person AI company.": "Tiger AI 把最迷茫的第一步免费开放。付费价值从 founder 把方向变成可运营的一人 AI 公司开始。",
+  "Paid": "付费",
+  "Prompt-based AI Company Consultant asks questions, understands the founder, and recommends the best business direction.": "Prompt-based AI 公司顾问会提问、了解 founder，并推荐最合适的商业方向。",
+  "Business direction recommendation": "商业方向推荐",
+  "Best-fit AI company type": "最适合的 AI 公司类型",
+  "Basic next-step advice": "基础下一步建议",
+  "Form Company": "Form Company",
+  "The AI brain converts the chosen direction into a company blueprint, assigns AI employees, and creates sellable business assets.": "AI 主脑会把选择的方向变成公司蓝图、配置 AI 员工，并创建可销售的商业资产。",
+  "Company blueprint": "公司蓝图",
+  "AI employee assignment": "AI 员工配置",
+  "Service package and pricing": "服务配套和价格",
+  "Business kit, demo link, and command desk": "商业工具包、演示链接和控制台",
+  "Answer a guided interview for free. When the direction feels right, form the company and let the AI brain build the blueprint, AI employees, business kit, and execution plan.": "免费回答引导式问题。方向确认后，form company，并让 AI 主脑生成蓝图、AI 员工、商业工具包和执行计划。",
+  "Choose the direction you want Tiger AI to form into a company.": "选择你要 Tiger AI 生成成公司的方向。",
+  "Founder Diagnosis is free. This step turns the chosen direction into an AI company type, AI employee assignment, service package, demo flow, and business kit.": "Founder Diagnosis 是免费的。这一步会把选择的方向变成 AI 公司类型、AI 员工配置、服务配套、演示流程和商业工具包。",
+  "Use the free Founder Diagnosis first. When the direction feels right, come back here to form the company.": "先使用免费的 Founder Diagnosis。方向确认后，再回到这里 form company。",
+  "Form this company": "生成这间公司",
+  "Paid Formation Step": "付费生成步骤",
+  "Form Company Workspace": "Form Company 工作区",
+  "The free diagnosis picked the direction. Here, Tiger AI's AI brain forms": "免费诊断已经选出方向。这里 Tiger AI 的 AI 主脑会生成",
+  "assigns AI employees, and prepares the company system.": "配置 AI 员工，并准备公司系统。",
+  "01 Direction": "01 方向",
+  "02 Form Company": "02 Form Company",
+  "AI Brain": "AI 主脑",
+  "Form the company from the consultant output.": "根据顾问输出生成公司。",
+  "The AI brain turns the recommended direction into a clear company name, target customer, first offer, pricing direction, handover rule, and assigned employee team.": "AI 主脑会把推荐方向转成清楚的公司名称、目标客户、第一个 offer、价格方向、交接规则和员工团队。",
+  "AI Employee Assignment": "AI 员工配置",
+  "AI employees assigned for this company.": "为这间公司配置的 AI 员工。",
+  "This is where the paid company formation becomes valuable: Tiger AI assigns the roles needed to deliver the service, then guides their training checklist.": "这就是付费 company formation 的价值：Tiger AI 配置交付服务所需角色，并引导训练清单。",
+  "Generate free direction": "生成免费方向",
+  "Refine diagnosis": "优化诊断",
+  "Founder Diagnosis is free. Form Company and operating tools start when the founder wants Tiger AI to build the actual company system.": "Founder Diagnosis 免费。Form Company 和运营工具从 founder 要 Tiger AI 建立真实公司系统时开始。",
+  "Free Founder Diagnosis": "免费 Founder Diagnosis",
+  "Find your direction": "找到你的方向",
+  "AI Company Consultant interview": "AI 公司顾问访谈",
+  "Recommended business direction": "推荐商业方向",
+  "No company formation yet": "还不生成公司",
+  "Start free": "免费开始",
+  "Form your first company": "生成第一间公司",
+  "AI brain company formation": "AI 主脑生成公司",
+  "3 assigned AI employees": "3 个已配置 AI 员工",
+  "Form company": "生成公司"
+});
+
 const originalTextNodes = new WeakMap();
 const originalAttributes = new WeakMap();
 const originalInputValues = new WeakMap();
