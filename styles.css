@@ -1538,6 +1538,400 @@ h3 {
   color: var(--silver);
 }
 
+.simple-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.8fr);
+  gap: clamp(26px, 5vw, 64px);
+  align-items: center;
+  width: min(1160px, calc(100% - 36px));
+  min-height: calc(100svh - 62px);
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.simple-hero-copy .lede {
+  max-width: 640px;
+}
+
+.hero-logo.compact {
+  width: min(260px, 72vw);
+  height: 98px;
+  margin-bottom: 18px;
+}
+
+.hero-console,
+.app-sidebar,
+.chat-workspace,
+.blueprint-hero-card,
+.blueprint-card,
+.employee-list-panel,
+.employee-detail-panel,
+.product-flow-card,
+.mini-pricing-strip,
+.price-pill {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022));
+  box-shadow: var(--shadow);
+}
+
+.hero-console {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.console-bar,
+.workspace-title,
+.employee-detail-header,
+.blueprint-actions,
+.mini-pricing-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.console-bar {
+  justify-content: flex-start;
+  color: var(--silver);
+  font-size: 13px;
+}
+
+.console-message {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  line-height: 1.55;
+}
+
+.console-message.user {
+  margin-left: 32px;
+  color: #041019;
+  background: linear-gradient(135deg, #e9fbff, var(--cyan));
+  font-weight: 750;
+}
+
+.console-message.ai {
+  background: rgba(0, 184, 230, 0.08);
+}
+
+.console-message span,
+.console-output-grid span,
+.diagnosis-card span,
+.blueprint-hero-card > span,
+.blueprint-card span,
+.employee-detail-grid span {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.console-message strong,
+.console-output-grid strong,
+.diagnosis-card strong,
+.blueprint-card strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--silver);
+  line-height: 1.45;
+}
+
+.console-output-grid,
+.product-flow-grid,
+.blueprint-board,
+.company-work-grid,
+.employee-detail-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.console-output-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.console-output-grid div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.compact-section {
+  padding: 34px 0;
+}
+
+.clean-heading {
+  margin-bottom: 16px;
+}
+
+.product-flow-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-flow-card {
+  display: block;
+  padding: 18px;
+  transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.product-flow-card:hover {
+  border-color: var(--cyan-line);
+  transform: translateY(-2px);
+}
+
+.product-flow-card.featured,
+.price-pill.highlighted,
+.blueprint-hero-card {
+  border-color: var(--cyan-line);
+  background: linear-gradient(180deg, rgba(0, 184, 230, 0.13), rgba(255, 255, 255, 0.026));
+}
+
+.product-flow-card span,
+.price-pill span {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mini-pricing-strip {
+  padding: 18px;
+}
+
+.mini-pricing-strip h2 {
+  max-width: 620px;
+  margin-bottom: 0;
+  font-size: clamp(22px, 2.6vw, 32px);
+}
+
+.price-pill {
+  min-width: 190px;
+  padding: 14px;
+}
+
+.price-pill strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--silver);
+}
+
+.app-shell,
+.workspace-shell {
+  width: min(1160px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 30px 0 58px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 16px;
+  min-height: calc(100svh - 62px);
+}
+
+.app-sidebar,
+.chat-workspace {
+  padding: 18px;
+}
+
+.app-sidebar {
+  align-self: start;
+  position: sticky;
+  top: 82px;
+}
+
+.sidebar-chip-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.sidebar-chip-list button,
+.employee-row {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 11px;
+  color: var(--silver);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  text-align: left;
+}
+
+.chat-workspace {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 14px;
+}
+
+.workspace-title p {
+  max-width: 480px;
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.status-pill {
+  border: 1px solid var(--cyan-line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--cyan);
+  background: rgba(0, 184, 230, 0.1);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.chat-panel {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 420px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.chat-message {
+  max-width: 76%;
+  border-radius: var(--radius);
+  padding: 13px;
+  line-height: 1.55;
+}
+
+.ai-message {
+  border: 1px solid var(--line);
+  color: var(--silver);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.user-message {
+  justify-self: end;
+  color: #041019;
+  background: linear-gradient(135deg, #e9fbff, var(--cyan));
+  font-weight: 750;
+}
+
+.diagnosis-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.diagnosis-card div,
+.employee-detail-grid div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px;
+  background: rgba(0, 184, 230, 0.06);
+}
+
+.prompt-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.prompt-bar input {
+  min-height: 46px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 13px;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.workspace-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.blueprint-board {
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(190px, 0.7fr));
+}
+
+.blueprint-hero-card {
+  grid-row: span 2;
+  padding: 22px;
+}
+
+.blueprint-hero-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.blueprint-card {
+  padding: 17px;
+}
+
+.company-work-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+}
+
+.action-list {
+  display: grid;
+  gap: 9px;
+  margin: 16px 0 0;
+  padding-left: 22px;
+  color: var(--silver);
+  line-height: 1.55;
+}
+
+.employee-workspace {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.employee-list-panel,
+.employee-detail-panel {
+  padding: 16px;
+}
+
+.employee-list-panel {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+}
+
+.employee-row {
+  display: grid;
+  gap: 6px;
+}
+
+.employee-row.active,
+.employee-row:hover {
+  border-color: var(--cyan-line);
+  background: var(--cyan-soft);
+}
+
+.employee-row span {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.employee-detail-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.employee-detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.employee-detail-grid p {
+  margin: 8px 0 0;
+  color: var(--silver);
+  line-height: 1.55;
+}
+
 @media (max-width: 1120px) {
   .site-header {
     grid-template-columns: 150px minmax(0, 1fr);
@@ -1569,17 +1963,23 @@ h3 {
   }
 
   .generator-board,
-  .generated-grid {
+  .generated-grid,
+  .blueprint-board,
+  .mini-pricing-strip {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 940px) {
   .hero-section,
+  .simple-hero,
+  .app-shell,
   .builder-grid,
   .demo-layout,
   .dashboard-shell,
-  .login-layout {
+  .login-layout,
+  .company-work-grid,
+  .employee-workspace {
     grid-template-columns: 1fr;
   }
 
@@ -1598,12 +1998,19 @@ h3 {
   .dashboard-grid,
   .dashboard-panel-grid,
   .asset-grid,
-  .checklist-grid,
-  .blueprint-grid,
-  .consultant-grid,
-  .launch-map,
-  .generator-assets {
+    .checklist-grid,
+    .blueprint-grid,
+    .consultant-grid,
+    .launch-map,
+    .generator-assets,
+    .product-flow-grid,
+    .diagnosis-card,
+    .employee-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    position: static;
   }
 }
 
@@ -1670,15 +2077,25 @@ h3 {
   .launch-map,
   .generator-assets,
   .pain-choice-grid,
-  .stat-grid,
-  .role-grid {
+    .stat-grid,
+    .role-grid,
+    .console-output-grid,
+    .prompt-bar {
     grid-template-columns: 1fr;
   }
 
   .generated-actions,
-  .generated-header {
+  .generated-header,
+  .workspace-title,
+  .employee-detail-header,
+  .blueprint-actions,
+  .mini-pricing-strip {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .chat-message {
+    max-width: 100%;
   }
 
   .side-steps {

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Employees | Tiger AI</title>
+    <meta name="description" content="Assigned AI employee roles for a one-person AI company.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI home">
+        <img class="brand-logo" src="assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="consultant.html">Consultant</a>
+        <a href="company.html">Company</a>
+        <a href="employees.html">AI Employees</a>
+        <a href="user-dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-button" href="login.html">Log in</a>
+        <a class="primary-button" href="company.html">Company blueprint</a>
+      </div>
+    </header>
+
+    <main class="workspace-shell">
+      <section class="workspace-title">
+        <div>
+          <p class="eyebrow">AI Employee Studio</p>
+          <h1>Train the roles assigned by Tiger AI.</h1>
+        </div>
+        <p>For now this is a polished frontend preview. Real training and chat will come later.</p>
+      </section>
+
+      <section class="employee-workspace">
+        <aside class="employee-list-panel">
+          <button class="employee-row active" type="button">
+            <span>01</span>
+            <strong>AI First Responder</strong>
+          </button>
+          <button class="employee-row" type="button">
+            <span>02</span>
+            <strong>AI Lead Qualifier</strong>
+          </button>
+          <button class="employee-row" type="button">
+            <span>03</span>
+            <strong>AI Sales Handover Assistant</strong>
+          </button>
+          <button class="employee-row" type="button">
+            <span>04</span>
+            <strong>AI Proposal Writer</strong>
+          </button>
+        </aside>
+
+        <article class="employee-detail-panel">
+          <div class="employee-detail-header">
+            <div>
+              <p class="eyebrow">Selected employee</p>
+              <h2>AI First Responder</h2>
+            </div>
+            <span class="status-pill">72% ready</span>
+          </div>
+
+          <div class="employee-detail-grid">
+            <div>
+              <span>Main job</span>
+              <p>Reply to new enquiries quickly, ask basic questions, and keep the prospect engaged.</p>
+            </div>
+            <div>
+              <span>Must collect</span>
+              <p>Name, need, budget range, timeline, location, preferred contact method.</p>
+            </div>
+            <div>
+              <span>Handover rule</span>
+              <p>Send hot leads to the founder when the prospect has budget and urgency.</p>
+            </div>
+            <div>
+              <span>Tone</span>
+              <p>Helpful, fast, professional, simple English or Chinese.</p>
+            </div>
+          </div>
+
+          <div class="training-card">
+            <p class="eyebrow">Knowledge needed</p>
+            <ul class="checklist-grid">
+              <li>Service details</li>
+              <li>Pricing rules</li>
+              <li>FAQ</li>
+              <li>Booking rules</li>
+              <li>Service area</li>
+              <li>Human contact</li>
+            </ul>
+          </div>
+
+          <form class="form-grid">
+            <label>
+              Employee instructions
+              <textarea>Answer quickly. Ask one question at a time. Do not invent pricing. Hand over hot leads to the founder.</textarea>
+            </label>
+            <button class="primary-button" type="button">Save employee draft</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>AI employees become roles inside a sellable service package.</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
