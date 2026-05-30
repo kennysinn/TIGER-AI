@@ -1219,7 +1219,8 @@ h3 {
 }
 
 .employee-chip-list span,
-.mini-metric-list span {
+.mini-metric-list span,
+.mini-metric-list a {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 10px 11px;
@@ -1227,6 +1228,11 @@ h3 {
   background: rgba(255, 255, 255, 0.04);
   font-size: 13px;
   font-weight: 800;
+}
+
+.mini-metric-list a:hover {
+  border-color: var(--cyan-line);
+  background: var(--cyan-soft);
 }
 
 .checklist-grid {
@@ -1639,6 +1645,18 @@ h3 {
   line-height: 1.45;
 }
 
+.card-link {
+  display: block;
+  margin-top: 7px;
+  color: var(--silver);
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.card-link:hover {
+  color: var(--cyan);
+}
+
 .console-output-grid,
 .product-flow-grid,
 .blueprint-board,
@@ -1751,6 +1769,7 @@ h3 {
 }
 
 .sidebar-chip-list button,
+.sidebar-chip-list a,
 .employee-row {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1932,6 +1951,344 @@ h3 {
   line-height: 1.55;
 }
 
+.detail-workspace {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.detail-nav,
+.detail-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022));
+  box-shadow: var(--shadow);
+}
+
+.detail-nav {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  padding: 16px;
+}
+
+.detail-nav a {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 11px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.035);
+  font-weight: 850;
+}
+
+.detail-nav a.active,
+.detail-nav a:hover {
+  color: var(--text);
+  border-color: var(--cyan-line);
+  background: var(--cyan-soft);
+}
+
+.detail-panel {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.detail-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detail-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.detail-card span {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-card strong,
+.detail-card p {
+  display: block;
+  margin: 8px 0 0;
+  color: var(--silver);
+  line-height: 1.55;
+}
+
+.wide-card {
+  grid-column: span 2;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Final UI polish: keep the existing Tiger AI direction, tighten the app feel. */
+body {
+  background:
+    linear-gradient(180deg, rgba(0, 184, 230, 0.07), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 28%),
+    linear-gradient(180deg, #02050a 0%, var(--bg) 42%, #07101a 100%);
+}
+
+body::before {
+  opacity: 0.78;
+}
+
+.site-header {
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.26);
+}
+
+.brand-logo {
+  padding: 2px;
+  border: 1px solid rgba(197, 216, 232, 0.08);
+}
+
+.main-nav {
+  border: 1px solid rgba(197, 216, 232, 0.08);
+  border-radius: var(--radius);
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.main-nav a.active {
+  border-color: rgba(0, 184, 230, 0.3);
+  background: rgba(0, 184, 230, 0.12);
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button,
+.language-toggle,
+.product-flow-card,
+.employee-row,
+.detail-nav a,
+.sidebar-chip-list a,
+.card-link,
+.readiness-row {
+  transition: border-color 0.16s ease, background 0.16s ease, color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover,
+.language-toggle:hover {
+  box-shadow: 0 12px 30px rgba(0, 184, 230, 0.12);
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.ghost-button:focus-visible,
+.language-toggle:focus-visible,
+.main-nav a:focus-visible,
+.employee-row:focus-visible,
+.detail-nav a:focus-visible,
+.product-flow-card:focus-visible,
+.sidebar-chip-list a:focus-visible,
+.card-link:focus-visible {
+  outline: 2px solid rgba(0, 184, 230, 0.8);
+  outline-offset: 3px;
+}
+
+.simple-hero {
+  min-height: min(760px, calc(100svh - 62px));
+}
+
+.simple-hero-copy {
+  position: relative;
+}
+
+.simple-hero-copy::before {
+  position: absolute;
+  top: -26px;
+  left: -22px;
+  width: 78px;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--cyan), transparent);
+}
+
+.hero-console,
+.chat-workspace,
+.blueprint-hero-card,
+.employee-detail-panel,
+.detail-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-console::before,
+.chat-workspace::before,
+.blueprint-hero-card::before,
+.employee-detail-panel::before,
+.detail-panel::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(0, 184, 230, 0.72), transparent);
+}
+
+.hero-console,
+.app-sidebar,
+.chat-workspace,
+.blueprint-hero-card,
+.blueprint-card,
+.employee-list-panel,
+.employee-detail-panel,
+.product-flow-card,
+.mini-pricing-strip,
+.price-pill,
+.detail-nav,
+.detail-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.066), rgba(255, 255, 255, 0.025)),
+    rgba(8, 17, 26, 0.78);
+}
+
+.console-message.user,
+.user-message {
+  box-shadow: 0 12px 28px rgba(0, 184, 230, 0.12);
+}
+
+.console-message.ai,
+.diagnosis-card div,
+.employee-detail-grid div,
+.detail-card,
+.blueprint-card {
+  background:
+    linear-gradient(180deg, rgba(0, 184, 230, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.015);
+}
+
+.product-flow-card {
+  min-height: 178px;
+}
+
+.product-flow-card span,
+.employee-row span,
+.detail-card span,
+.blueprint-card span {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid rgba(0, 184, 230, 0.25);
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: rgba(0, 184, 230, 0.08);
+}
+
+.product-flow-card:hover,
+.employee-row:hover,
+.detail-nav a:hover,
+.sidebar-chip-list a:hover,
+.readiness-row:hover {
+  transform: translateY(-2px);
+}
+
+.workspace-title {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background:
+    linear-gradient(90deg, rgba(0, 184, 230, 0.09), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow);
+}
+
+.workspace-title h1 {
+  margin-bottom: 0;
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.prompt-bar {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.prompt-bar input {
+  border-color: rgba(197, 216, 232, 0.12);
+}
+
+.blueprint-board,
+.company-work-grid,
+.employee-workspace,
+.detail-workspace,
+.demo-layout,
+.dashboard-panel-grid {
+  align-items: stretch;
+}
+
+.blueprint-card,
+.detail-card {
+  min-height: 126px;
+}
+
+.readiness-row {
+  text-decoration: none;
+}
+
+.readiness-row:hover {
+  border-color: var(--cyan-line);
+  background: rgba(0, 184, 230, 0.08);
+}
+
+.employee-row::after,
+.detail-nav a::after,
+.sidebar-chip-list a::after {
+  content: "→";
+  color: var(--cyan);
+  font-weight: 900;
+}
+
+.employee-row,
+.detail-nav a,
+.sidebar-chip-list a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-row span {
+  grid-column: 1;
+}
+
+.employee-row strong {
+  grid-column: 1;
+}
+
+.employee-row::after {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.client-page-card {
+  border-color: rgba(0, 184, 230, 0.22);
+}
+
+.bubble {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
 @media (max-width: 1120px) {
   .site-header {
     grid-template-columns: 150px minmax(0, 1fr);
@@ -1979,7 +2336,8 @@ h3 {
   .dashboard-shell,
   .login-layout,
   .company-work-grid,
-  .employee-workspace {
+  .employee-workspace,
+  .detail-workspace {
     grid-template-columns: 1fr;
   }
 
@@ -2005,7 +2363,8 @@ h3 {
     .generator-assets,
     .product-flow-grid,
     .diagnosis-card,
-    .employee-detail-grid {
+    .employee-detail-grid,
+    .detail-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2096,6 +2455,14 @@ h3 {
 
   .chat-message {
     max-width: 100%;
+  }
+
+  .detail-panel-header {
+    flex-direction: column;
+  }
+
+  .wide-card {
+    grid-column: auto;
   }
 
   .side-steps {
