@@ -9,17 +9,42 @@
   const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
   const page = document.body.dataset.authPage;
   const requiredRole = document.body.dataset.authRequired;
+  const isChineseSite = window.location.pathname.includes("/zh/");
   const ALLOWED_NEXT_PAGES = new Set([
     "user-dashboard.html",
+    "dashboard.html",
     "admin-dashboard.html",
     "public-dashboard.html",
     "templates.html",
     "builder.html",
-    "demo.html"
+    "demo.html",
+    "workspace.html"
   ]);
 
   const translate = (message) => {
-    return window.TigerI18n?.translate(message) || message;
+    if (!isChineseSite) {
+      return window.TigerI18n?.translate(message) || message;
+    }
+
+    const zh = {
+      "Not signed in": "未登录",
+      "guest": "访客",
+      "free": "免费",
+      "Signing in...": "正在登录...",
+      "Creating account...": "正在创建账号...",
+      "Account created. Check your email if confirmation is enabled.": "账号已创建。如果开启邮箱确认，请检查邮箱。",
+      "Enter your email first, then click forgot password.": "请先输入邮箱，再点击忘记密码。",
+      "Sending password reset email...": "正在发送密码重置邮件...",
+      "Password reset email sent. Check your inbox.": "密码重置邮件已发送，请检查收件箱。",
+      "Opening Google login...": "正在打开 Google 登录...",
+      "Updating password...": "正在更新密码...",
+      "Use at least 8 characters for the new password.": "新密码至少需要 8 个字符。",
+      "Passwords do not match.": "两次输入的密码不一致。",
+      "Reset session not found. Open the latest password reset link from your email.": "没有找到重置 session，请打开邮箱里的最新密码重置链接。",
+      "Password updated. Redirecting to login...": "密码已更新，正在跳转到登录页..."
+    };
+
+    return zh[message] || message;
   };
 
   const setStatus = (message) => {
@@ -84,7 +109,11 @@
   };
 
   const dashboardFor = (profile) => {
-    return isAdminProfile(profile) ? "admin-dashboard.html" : "user-dashboard.html";
+    if (isAdminProfile(profile)) {
+      return isChineseSite ? "../admin-dashboard.html" : "admin-dashboard.html";
+    }
+
+    return isChineseSite ? "dashboard.html" : "user-dashboard.html";
   };
 
   const getNextPage = () => {
@@ -105,7 +134,7 @@
     }
 
     if (next === "admin-dashboard.html" && !isAdminProfile(profile)) {
-      window.location.href = "user-dashboard.html";
+      window.location.href = isChineseSite ? "dashboard.html" : "user-dashboard.html";
       return;
     }
 
@@ -167,7 +196,7 @@
     }
 
     if (requiredRole === "admin" && !isAdminProfile(profile)) {
-      window.location.href = "user-dashboard.html";
+      window.location.href = isChineseSite ? "dashboard.html" : "user-dashboard.html";
     }
   };
 
@@ -312,7 +341,7 @@
     document.querySelectorAll("[data-auth-logout]").forEach((button) => {
       button.addEventListener("click", async () => {
         await client.auth.signOut();
-        window.location.href = "public-dashboard.html";
+        window.location.href = "index.html";
       });
     });
   };

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>仪表盘 | Tiger AI</title>
+    <meta name="description" content="Tiger AI 创办人控制台。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-auth-required="user">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI 首页">
+        <img class="brand-logo" src="../assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="consultant.html">顾问</a>
+        <a href="workspace.html">工作台</a>
+        <a href="dashboard.html">仪表盘</a>
+      </nav>
+      <div class="header-actions">
+        <a class="language-toggle" href="../user-dashboard.html">EN</a>
+        <span class="auth-pill" data-account-email>正在检查 session...</span>
+        <button class="ghost-button" type="button" data-auth-logout>退出</button>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="dashboard-nav" aria-label="仪表盘导航">
+        <a class="active" href="dashboard.html">控制台</a>
+        <a href="workspace.html">工作台</a>
+        <a href="consultant.html">顾问</a>
+        <a href="login.html">账号</a>
+      </aside>
+
+      <section class="dashboard-content">
+        <div class="workspace-title">
+          <div>
+            <p class="eyebrow">创办人控制台</p>
+            <h1>管理你的一人 AI 公司。</h1>
+          </div>
+          <p>在一个页面查看准备度、AI 员工、演示、线索、商业工具包和第一个月费收入目标。</p>
+        </div>
+        <p class="inline-status" data-auth-error hidden></p>
+
+        <div class="stat-grid">
+          <article class="dashboard-card">
+            <span class="stat-label">准备度</span>
+            <strong>72%</strong>
+            <p>可以发给客户看演示。</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">AI 员工</span>
+            <strong>3</strong>
+            <p>已配置角色。</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">演示链接</span>
+            <strong>1</strong>
+            <p>可分享预览。</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">线索</span>
+            <strong>0</strong>
+            <p>等待提案请求。</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">商业工具包</span>
+            <strong>6</strong>
+            <p>资产已准备。</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">月费收入目标</span>
+            <strong>RM3k</strong>
+            <p>第一个目标。</p>
+          </article>
+        </div>
+
+        <section class="dashboard-panel-grid">
+          <article class="step-panel">
+            <p class="eyebrow">下一步</p>
+            <h2>分享演示，并邀请客户做需求访谈。</h2>
+            <ul class="compact-list">
+              <li>把演示发给 10 位目标中小企业老板。</li>
+              <li>询问他们现在如何处理询盘。</li>
+              <li>收集 FAQ、价格规则和交接负责人。</li>
+            </ul>
+          </article>
+          <article class="step-panel">
+            <p class="eyebrow">快速入口</p>
+            <h2>继续完善。</h2>
+            <div class="mini-metric-list">
+              <a href="workspace.html">公司蓝图</a>
+              <a href="workspace.html">AI 员工</a>
+              <a href="workspace.html">商业工具包</a>
+              <a href="workspace.html">演示链接</a>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>注册后即可保存你的工作台。</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../app.js"></script>
+    <script src="../supabase-auth.js"></script>
+  </body>
+</html>

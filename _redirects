@@ -1,0 +1,17 @@
+/templates.html /workspace.html 301!
+/builder.html /workspace.html 301!
+/demo.html /workspace.html 301!
+/dashboard.html /user-dashboard.html 301!
+/public-dashboard.html /index.html 301!
+/company.html /workspace.html 301!
+/employees.html /workspace.html 301!
+/business-kit.html /workspace.html 301!
+/demo-link.html /workspace.html 301!
+/diagnosis-result.html /workspace.html 301!
+/employee-first-responder.html /workspace.html 301!
+/employee-lead-qualifier.html /workspace.html 301!
+/employee-sales-handover.html /workspace.html 301!
+/employee-proposal-writer.html /workspace.html 301!
+/zh/dashboard /zh/dashboard.html 301!
+/zh/workspace /zh/workspace.html 301!
+/zh/consultant /zh/consultant.html 301!

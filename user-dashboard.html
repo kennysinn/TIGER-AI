@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User Dashboard | Tiger AI</title>
-    <meta name="description" content="Tiger AI customer user dashboard.">
+    <title>Dashboard | Tiger AI</title>
+    <meta name="description" content="Founder Command Desk for Tiger AI users.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body data-auth-required="user">
@@ -15,164 +15,86 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="consultant.html">Consultant</a>
-        <a href="company.html">Company</a>
-        <a href="employees.html">AI Employees</a>
+        <a href="workspace.html">Workspace</a>
         <a href="user-dashboard.html">Dashboard</a>
       </nav>
       <div class="header-actions">
+        <a class="language-toggle" href="zh/dashboard.html">ZH</a>
         <span class="auth-pill" data-account-email>Checking session...</span>
         <button class="ghost-button" type="button" data-auth-logout>Log out</button>
-        <a class="primary-button" href="company.html">New company</a>
       </div>
     </header>
 
     <main class="dashboard-shell">
-      <aside class="dashboard-nav" aria-label="User dashboard navigation">
-        <a class="active" href="user-dashboard.html">Founder Desk</a>
-        <a href="company.html">AI Companies</a>
-        <a href="employees.html">AI Employees</a>
+      <aside class="dashboard-nav" aria-label="Dashboard navigation">
+        <a class="active" href="user-dashboard.html">Command Desk</a>
+        <a href="workspace.html">Workspace</a>
         <a href="consultant.html">Consultant</a>
-        <a href="business-kit.html">Business Kits</a>
-        <a href="demo-link.html">Demo Links</a>
-        <a href="user-dashboard.html#leads">Leads</a>
-        <a href="user-dashboard.html#subscription">Subscription</a>
+        <a href="login.html">Account</a>
       </aside>
 
       <section class="dashboard-content">
-        <div class="page-intro">
+        <div class="workspace-title">
           <div>
             <p class="eyebrow">Founder Command Desk</p>
             <h1>Control your one-person AI company.</h1>
           </div>
-          <p>See which AI company can sell, which demo link got attention, which lead requested a proposal, and what blocks launch readiness.</p>
+          <p>See readiness, employees, demo, leads, business kit, and the first MRR target in one place.</p>
         </div>
         <p class="inline-status" data-auth-error hidden></p>
-        <p class="inline-status" data-data-status hidden></p>
 
         <div class="stat-grid">
           <article class="dashboard-card">
-            <span class="stat-label">AI Companies</span>
-            <strong data-company-count>0</strong>
-            <p>In portfolio.</p>
+            <span class="stat-label">Readiness</span>
+            <strong>72%</strong>
+            <p>Ready for client demo.</p>
           </article>
           <article class="dashboard-card">
-            <span class="stat-label">Ready to Sell</span>
-            <strong>5</strong>
-            <p>Assets ready.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Demo Links</span>
-            <strong>1</strong>
-            <p>Shared.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Proposal Requests</span>
+            <span class="stat-label">AI Employees</span>
             <strong>3</strong>
-            <p>Need follow-up.</p>
+            <p>Assigned roles.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Demo Link</span>
+            <strong>1</strong>
+            <p>Shareable preview.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Leads</span>
+            <strong>0</strong>
+            <p>Awaiting proposal requests.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="stat-label">Business Kit</span>
+            <strong>6</strong>
+            <p>Assets prepared.</p>
           </article>
           <article class="dashboard-card">
             <span class="stat-label">MRR Target</span>
-            <strong>RM1.5k</strong>
-            <p>RM0 / RM3k path.</p>
-          </article>
-          <article class="dashboard-card">
-            <span class="stat-label">Plan</span>
-            <strong data-account-plan>free</strong>
-            <p>Founder starter.</p>
+            <strong>RM3k</strong>
+            <p>First target.</p>
           </article>
         </div>
 
-        <section class="step-panel">
-          <div class="section-heading compact-heading">
-            <div>
-              <p class="eyebrow">Execution progress</p>
-              <h2>From idea to first AI company: 42% complete</h2>
-            </div>
-            <p class="section-lede">Next milestone: share the demo link and collect the first proposal request.</p>
-          </div>
-          <div class="launch-progress" aria-label="From idea to first AI company progress">
-            <i style="width: 42%"></i>
-          </div>
-        </section>
-
         <section class="dashboard-panel-grid">
           <article class="step-panel">
-            <p class="eyebrow">Company portfolio</p>
-            <h2>Your AI companies</h2>
-            <div class="company-list" data-company-list>
-              <div class="empty-state">
-                <h3>Loading companies...</h3>
-              </div>
-            </div>
-          </article>
-          <article class="step-panel">
-            <p class="eyebrow">Founder control</p>
-            <h2>What needs attention</h2>
+            <p class="eyebrow">Next action</p>
+            <h2>Share the demo and ask for a discovery call.</h2>
             <ul class="compact-list">
-              <li>Pricing rules missing from one demo</li>
-              <li>3 proposal requests need follow-up</li>
-              <li>Monthly report template is ready</li>
-              <li>MRR target needs first client offer</li>
+              <li>Send the demo to 10 target SME owners.</li>
+              <li>Ask what currently happens when enquiries arrive.</li>
+              <li>Collect FAQ, pricing rules, and handover contact.</li>
             </ul>
           </article>
-        </section>
-
-        <section class="dashboard-panel-grid" id="business-kits">
           <article class="step-panel">
-            <p class="eyebrow">Business launch kit</p>
-            <h2>Generated service assets</h2>
+            <p class="eyebrow">Workspace shortcuts</p>
+            <h2>Keep building.</h2>
             <div class="mini-metric-list">
-              <a href="business-kit.html">Service package</a>
-              <a href="business-kit.html">Pricing suggestion</a>
-              <a href="business-kit.html">Proposal outline</a>
-              <a href="business-kit.html">WhatsApp script</a>
-              <a href="business-kit.html">Onboarding form</a>
-              <a href="business-kit.html">Monthly report</a>
+              <a href="workspace.html">Company blueprint</a>
+              <a href="workspace.html">AI employees</a>
+              <a href="workspace.html">Business kit</a>
+              <a href="workspace.html">Demo link</a>
             </div>
-          </article>
-          <article class="step-panel" id="leads">
-            <p class="eyebrow">Client signal</p>
-            <h2>Demo link pipeline</h2>
-            <ul class="compact-list">
-              <li><a href="demo-link.html">New proposal request - Speed-to-Lead demo</a></li>
-              <li><a href="demo-link.html">Missing info feedback - pricing rules</a></li>
-              <li><a href="demo-link.html">Follow-up needed - booking workflow</a></li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="step-panel">
-          <p class="eyebrow">Founder launch map</p>
-          <h2>From pain point to operating business</h2>
-          <div class="launch-map">
-            <span>Business pain</span>
-            <span>AI company</span>
-            <span>AI employees</span>
-            <span>Service package</span>
-            <span>Demo link</span>
-            <span>Proposal request</span>
-            <span>MRR dashboard</span>
-          </div>
-        </section>
-
-        <section id="subscription" aria-labelledby="subscription-title">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Subscription Plan</p>
-              <h2 id="subscription-title">AI Business Operator preview.</h2>
-            </div>
-            <p class="section-lede">Payment is not connected yet.</p>
-          </div>
-          <article class="pricing-card featured compact-pricing">
-            <span class="plan-label">Builder</span>
-            <h3>Build repeatable offers</h3>
-            <div class="price">RM299<small>/month</small></div>
-            <ul class="compact-list">
-              <li>10 AI employees</li>
-              <li>3 AI company profiles</li>
-              <li>Proposal and pricing generators</li>
-              <li>Client demo links and dashboard</li>
-            </ul>
           </article>
         </section>
       </section>
@@ -185,6 +107,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
     <script src="supabase-auth.js"></script>
-    <script src="tiger-data.js"></script>
   </body>
 </html>

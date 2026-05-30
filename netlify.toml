@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/zh"
+  to = "/zh/index.html"
+  status = 200

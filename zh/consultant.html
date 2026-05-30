@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI 顾问 | Tiger AI</title>
+    <meta name="description" content="使用 Tiger AI 的免费 AI 公司顾问找到 AI 生意方向。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tiger AI 首页">
+        <img class="brand-logo" src="../assets/tiger-ai-logo-header.jpeg" alt="Tiger AI">
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="consultant.html">顾问</a>
+        <a href="workspace.html">工作台</a>
+        <a href="dashboard.html">仪表盘</a>
+      </nav>
+      <div class="header-actions">
+        <a class="language-toggle" href="../consultant.html">EN</a>
+        <a class="ghost-button" href="login.html">登录</a>
+        <a class="primary-button" href="workspace.html">生成公司</a>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="app-sidebar">
+        <p class="eyebrow">免费诊断</p>
+        <h2>从这里开始</h2>
+        <p>像使用商业顾问一样回答问题。这个阶段只帮你定方向，还不会生成付费公司资产。</p>
+        <div class="sidebar-chip-list">
+          <a href="workspace.html">我认识中小企业老板</a>
+          <a href="workspace.html">我会销售但不会写代码</a>
+          <a href="workspace.html">我想做副业</a>
+          <a href="workspace.html">我需要第一个服务</a>
+        </div>
+      </aside>
+
+      <section class="chat-workspace" aria-label="AI 公司顾问对话">
+        <div class="workspace-title">
+          <div>
+            <p class="eyebrow">AI 公司顾问</p>
+            <h1>告诉 Tiger AI 你是谁，它帮你找方向。</h1>
+          </div>
+          <span class="status-pill">免费预览</span>
+        </div>
+
+        <div class="chat-panel">
+          <div class="chat-message ai-message">
+            <strong>Tiger AI</strong>
+            <p>告诉我你的技能、人脉、可投入时间，以及你能接触的客户。我会推荐一个实际可执行的 AI 公司方向。</p>
+          </div>
+          <div class="chat-message user-message">
+            <p>我可以和中小企业老板沟通。我不懂技术。每周可以投入 8 小时。</p>
+          </div>
+          <div class="diagnosis-card">
+            <div>
+              <span>创办人类型</span>
+              <strong>销售型新手创办人</strong>
+            </div>
+            <div>
+              <span>推荐方向</span>
+              <strong>极速回应 AI 公司</strong>
+            </div>
+            <div>
+              <span>第一个服务</span>
+              <strong>AI 询盘回复系统</strong>
+            </div>
+            <div>
+              <span>下一步</span>
+              <strong>进入公司工作台</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-bar">
+          <input type="text" value="我想开始 AI 生意，但不知道该做什么。" aria-label="创办人输入">
+          <a class="primary-button" href="workspace.html">生成方向</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Tiger AI</strong>
+      <span>先免费定方向，方向清楚后再生成公司。</span>
+    </footer>
+    <script src="../app.js"></script>
+  </body>
+</html>
